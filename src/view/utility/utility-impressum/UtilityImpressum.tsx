@@ -3,39 +3,37 @@ import './utilityImpressum.scss';
 const UtilityImpressum = () => {
     return (
         <div className="utility-impressum">
-            <h2>Impressum</h2>
+            <h1>Impressum</h1>
             <p>
-                <strong>Angaben gemäß § 5 TMG</strong>
+                Ems Suntec UG (haftungsbeschränkt)
+                <br />
+                Diekstraße 23
+                <br />
+                48282 Emsdetten
             </p>
+            <div>
+                Telefon:
+                <br />
+                <div className='utility-impressum__spacer'/>
+                <a href="tel:+491797884043">+49 179 7884043</a>
+                <br />
+                <div className='utility-impressum__spacer'/>
+                <a href="tel:+491622913008">+49 162 2913008</a>
+                <br />
+                <div className='utility-impressum__spacer'/>
+                <a href="mailto:info@ems-suntec.de">info@ems-suntec.de</a>
+                <br />
+                <div className='utility-impressum__spacer'/>
+                <a href="https://www.ems-suntec.de" target="_blank" rel="noopener noreferrer">
+                    www.ems-suntec.de
+                </a>
+            </div>
             <p>
-                Ihr Firmenname
+                Amtsgericht Steinfurt HRB 15122
                 <br />
-                Musterstraße 123
-                <br />
-                12345 Musterstadt
+                St.-Nr.: 311/5826/1033
             </p>
-            <p>
-                <strong>Vertreten durch:</strong>
-                <br />
-                Max Mustermann
-            </p>
-            <p>
-                <strong>Kontakt:</strong>
-                <br />
-                Telefon: 01234 567890
-                <br />
-                E-Mail: info@ihrunternehmen.de
-            </p>
-            <p>
-                <strong>Umsatzsteuer-ID:</strong>
-                <br />
-                Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE123456789
-            </p>
-            <p>
-                <strong>Aufsichtsbehörde:</strong>
-                <br />
-                Musteraufsichtsbehörde
-            </p>
+            <p>Geschäftsführer: Haiko Winter, Thomas Harbering</p>
         </div>
     );
 };
