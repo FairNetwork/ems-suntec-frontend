@@ -1,16 +1,15 @@
 import SubHeading from './sub-heading/SubHeading';
 import SidebarItem from './sidebar-item/SidebarItem';
 import Logo from './logo/Logo';
-import logo from '../../../assets/fairfit_logo.png';
+import logo from '../../../assets/logo.png';
 import './sidebar.scss';
 import { useSidebarProvider } from './SidebarProvider';
 import { CSSProperties, useEffect, useMemo, useRef } from 'react';
-import { useIsMobile } from '../../../hooks/environment';
 import { motion } from 'framer-motion';
 
 const Sidebar = () => {
     const { isOpen, updateIsOpen, width } = useSidebarProvider();
-    const isMobile = useIsMobile();
+    const isMobile = true;
 
     const ref = useRef<HTMLDivElement>(null);
 
@@ -63,10 +62,12 @@ const Sidebar = () => {
                 exit={isMobile ? { left: `-${width}` } : {}}
                 animate={isMobile ? { left: isOpen ? '0' : `-${width}` } : {}}>
                 <Logo src={logo}>
-                    <div className="sidebar__logo">FairNet</div>
+                    <div className="sidebar__logo">EMS SUNTEC</div>
                 </Logo>
                 <SubHeading>
                     <SidebarItem text="Home" icon="fas fa-house" route="/" />
+                    <SidebarItem text="Referenzen" icon="fas fa-star" route="/references" />
+                    <SidebarItem text="Kontakt" icon="fas fa-envelope-open-text" route="/contact" />
                 </SubHeading>
             </motion.div>
             {isMobile && isOpen && (

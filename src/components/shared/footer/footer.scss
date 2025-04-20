@@ -4,19 +4,26 @@
 
   min-height: 32px;
   padding: 12px 24px;
-
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 8px;
   align-items: center;
-  justify-content: center;
 
-  gap: 12px;
 
-  &__item{
-    cursor: pointer;
+  &__items{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
-    &:hover{
-      opacity: .8;
+    gap: 12px;
+
+    &__item{
+      cursor: pointer;
+
+      &:hover{
+        opacity: .8;
+      }
     }
   }
 }

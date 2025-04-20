@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom';
 import { useMemo } from 'react';
 import Home from '../view/home/Home';
 import NoContent from '../view/no-content/NoContent';
+import Utility from "../view/utility/Utility";
 
 export const useContent = () => {
     const location = useLocation();
@@ -9,8 +10,10 @@ export const useContent = () => {
     return useMemo(() => {
         const path = location.pathname;
 
-        if (path === '/no_content') return <NoContent />;
+        if (path === '/') return <Home />;
 
-        return <Home />;
+        if (path.startsWith('/utility')) return <Utility />;
+
+        return <NoContent />;
     }, [location.pathname]);
 };
