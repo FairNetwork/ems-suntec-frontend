@@ -1,3 +1,11 @@
-.utility-impressum{
+.utility-impressum {
+  a {
+    color: var(--primary-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
 
+  &__spacer{
+    height: 4px;
+  }
 }

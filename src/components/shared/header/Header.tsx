@@ -1,10 +1,21 @@
 import './header.scss';
-import { useHeaderContent } from '../../../hooks/header';
+import logo from "../../../assets/logo.png"
+import {useNavigate} from "react-router-dom";
 
 const Header = () => {
-    const content = useHeaderContent();
+    const navigate = useNavigate();
 
-    return <div className="header">{content}</div>;
+    return (
+        <div className="header">
+            <div className="header__logo" onClick={()=> navigate('/')}>
+                <img src={logo} alt="logo"/>
+            </div>
+            <div className="header__actions">
+                <h3 className="header__actions__item" onClick={()=> navigate('/contact')}>Kontakt</h3>
+                <h3 className="header__actions__item" onClick={()=> navigate('/references')}>Referenzen</h3>
+            </div>
+        </div>
+    );
 };
 
 Header.displayName = 'Header';
