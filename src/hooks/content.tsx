@@ -10,10 +10,10 @@ export const useContent = () => {
     return useMemo(() => {
         const path = location.pathname;
 
-        if (path === '/no_content') return <NoContent />;
+        if (path === '/') return <Home />;
 
         if (path.startsWith('/utility')) return <Utility />;
 
-        return <Home />;
+        return <NoContent />;
     }, [location.pathname]);
 };
