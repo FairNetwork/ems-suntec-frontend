@@ -4,6 +4,14 @@
   gap: 24px;
 
   &__section {
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 22px;
+
     text-align: center;
+
+    p{
+      font-size: 1.4rem;
+    }
   }
 }

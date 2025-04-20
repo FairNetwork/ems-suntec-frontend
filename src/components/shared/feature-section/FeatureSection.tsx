@@ -23,7 +23,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}>
             <div className="image-wrapper">
-                <img src={imageUrl} alt={title} />
+                <motion.img src={imageUrl} alt={title} whileHover={{scale: 1.1}} />
             </div>
             <div className="text-wrapper">
                 <h2>{title}</h2>

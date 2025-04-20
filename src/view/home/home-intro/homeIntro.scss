@@ -1,20 +1,28 @@
 .home-intro {
+  position: relative;
   width: 100%;
-
   background-position: center left;
   background-repeat: no-repeat;
   background-size: cover;
 
-  &__content{
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
     margin: 0 auto;
     max-width: 980px;
     padding: 22px;
-
     color: #fff;
-
     text-align: center;
 
-    p{
+    p {
       font-size: 1.4rem;
     }
   }
