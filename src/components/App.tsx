@@ -15,7 +15,7 @@ import { useIsMobile } from '../hooks/environment';
 const App = () => {
     const content = useContent();
     const colorMode = useColorMode();
-    const isMobile = useIsMobile();
+    const isMobile = true;
     const { width, isOpen } = useSidebarProvider();
 
     const [shouldShowSplashScreen, setShouldShowSplashScreen] = useState(true);

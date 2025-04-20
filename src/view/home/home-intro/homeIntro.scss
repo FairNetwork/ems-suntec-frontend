@@ -1,0 +1,21 @@
+.home-intro {
+  width: 100%;
+
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content{
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 22px;
+
+    color: #fff;
+
+    text-align: center;
+
+    p{
+      font-size: 1.4rem;
+    }
+  }
+}

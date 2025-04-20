@@ -5,12 +5,11 @@ import logo from '../../../assets/logo.png';
 import './sidebar.scss';
 import { useSidebarProvider } from './SidebarProvider';
 import { CSSProperties, useEffect, useMemo, useRef } from 'react';
-import { useIsMobile } from '../../../hooks/environment';
 import { motion } from 'framer-motion';
 
 const Sidebar = () => {
     const { isOpen, updateIsOpen, width } = useSidebarProvider();
-    const isMobile = useIsMobile();
+    const isMobile = true;
 
     const ref = useRef<HTMLDivElement>(null);
 
