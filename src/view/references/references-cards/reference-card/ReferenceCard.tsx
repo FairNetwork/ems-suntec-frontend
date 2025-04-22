@@ -28,7 +28,7 @@ const ReferenceCard: FC<ReferenceCardProps> = ({id }) => {
                     {title}
                 </div>
                 <div className="reference-card__content__power">
-                    <Icon icon="fas fa-bolt" style={{ width: '20px', textAlign: 'center' }} />{' '}
+                    <Icon icon="fas fa-seedling" style={{ width: '20px', textAlign: 'center' }} />{' '}
                     {power}
                 </div>
             </div>
