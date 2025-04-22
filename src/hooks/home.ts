@@ -1,5 +1,6 @@
 import feature1 from "../assets/feature-section-1.png"
 import feature2 from "../assets/feature-section-2.png"
+import feature3 from "../assets/feature-section-3.png"
 import feature4 from "../assets/feature-section-4.png"
 
 export const useHomeFeatures = () => {
@@ -15,7 +16,7 @@ export const useHomeFeatures = () => {
         },{
             title: 'Professionelle Installation',
             description: 'Unsere Experten installieren Ihre Photovoltaikanlage fachgerecht und nach höchsten Standards.',
-            imageUrl: 'https://www.find-das-bild.de/fileadmin/_processed_/1/4/csm_nordsee-schaf_629f5399e2.jpg'
+            imageUrl: feature3
         },{
             title: 'Alles aus einer Hand',
             description: 'Wir übernehmen für Sie die Anmeldung bei Ihrem Netzbetreiber und Energieversorger.',
