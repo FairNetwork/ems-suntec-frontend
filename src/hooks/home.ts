@@ -1,7 +1,7 @@
-import feature1 from "../assets/feature-section-1.png"
-import feature2 from "../assets/feature-section-2.png"
-import feature3 from "../assets/feature-section-3.png"
-import feature4 from "../assets/feature-section-4.png"
+import feature1 from "../assets/icons/feature-section-1.png"
+import feature2 from "../assets/icons/feature-section-2.png"
+import feature3 from "../assets/icons/feature-section-3.png"
+import feature4 from "../assets/icons/feature-section-4.png"
 
 export const useHomeFeatures = () => {
     return [
