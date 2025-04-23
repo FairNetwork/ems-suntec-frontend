@@ -1,15 +1,26 @@
 import './contact.scss';
 import Input from '../../components/shared/input/Input';
-import { useState } from 'react';
+import {useMemo, useState} from 'react';
 import TextArea from '../../components/shared/textarea/Textarea';
 import Button from '../../components/shared/button/Button';
+import {sendMail} from "../../utils/mail";
 
 const Contact = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [message, setMessage] = useState('');
+    const [email, setEmail] = useState('');
 
-    const handleClick = () => {}
+    const handleClick = () => {
+        void sendMail({
+            message,lastName,firstName,email
+        })
+    }
+
+    const isDisabled = useMemo(() => {
+        return !firstName || !lastName || !email || !message;
+    }, [firstName, lastName, email, message]);
+
 
     return (
         <div className="contact">
@@ -28,6 +39,10 @@ const Contact = () => {
                     placeholder="Nachname"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
+                /><Input
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
                 <TextArea
                     placeholder="Ihre Nachricht"
@@ -35,7 +50,7 @@ const Contact = () => {
                     onChange={(e) => setMessage(e.target.value)}
                 />
                 <div className="contact__form__button">
-                    <Button onClick={handleClick}>Senden</Button>
+                    <Button onClick={handleClick} isDisabled={isDisabled}>Senden</Button>
                 </div>
             </div>
         </div>
