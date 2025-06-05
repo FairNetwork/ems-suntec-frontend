@@ -9,6 +9,7 @@ const HomeFeatures = () => {
     const content = useMemo(() => {
         return features.map(({ title, imageUrl, description }, index) => (
             <FeatureSection
+                key={title}
                 title={title}
                 description={description}
                 imageUrl={imageUrl}
