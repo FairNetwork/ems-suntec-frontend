@@ -61,4 +61,4 @@ export const EMAIL_TEMPLATE = `<!DOCTYPE html>
     </div>
   </body>
 </html>
-`
+`;
