@@ -1,26 +1,40 @@
 import './contact.scss';
 import Input from '../../components/shared/input/Input';
-import {useMemo, useState} from 'react';
+import { useMemo, useState } from 'react';
 import TextArea from '../../components/shared/textarea/Textarea';
 import Button from '../../components/shared/button/Button';
-import {sendMail} from "../../utils/mail";
+import { sendMail } from '../../utils/mail';
 
 const Contact = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [message, setMessage] = useState('');
     const [email, setEmail] = useState('');
+    const [isSending, setIsSending] = useState(false);
 
     const handleClick = () => {
+        setIsSending(true);
+
         void sendMail({
-            message,lastName,firstName,email
-        })
-    }
+            message,
+            lastName,
+            firstName,
+            email
+        }).then((result) => {
+            if (result === 200) {
+                setFirstName('');
+                setLastName('');
+                setMessage('');
+                setEmail('');
+            }
+
+            setIsSending(false);
+        });
+    };
 
     const isDisabled = useMemo(() => {
-        return !firstName || !lastName || !email || !message;
-    }, [firstName, lastName, email, message]);
-
+        return !firstName || !lastName || !email || !message || isSending;
+    }, [firstName, lastName, email, message, isSending]);
 
     return (
         <div className="contact">
@@ -39,7 +53,8 @@ const Contact = () => {
                     placeholder="Nachname"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
-                /><Input
+                />
+                <Input
                     placeholder="Email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -50,7 +65,9 @@ const Contact = () => {
                     onChange={(e) => setMessage(e.target.value)}
                 />
                 <div className="contact__form__button">
-                    <Button onClick={handleClick} isDisabled={isDisabled}>Senden</Button>
+                    <Button onClick={handleClick} isDisabled={isDisabled}>
+                        Senden
+                    </Button>
                 </div>
             </div>
         </div>
