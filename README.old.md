@@ -1,1 +1,0 @@
-# fairfit-frontend
