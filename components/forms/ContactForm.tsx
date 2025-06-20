@@ -42,6 +42,7 @@ export default function ContactForm() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         className="bg-green-50 border border-green-200 rounded-lg p-8 text-center"
+        key='contact-form-success'
       >
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
         <h3 className="text-2xl font-semibold text-green-800 mb-2">Vielen Dank für Ihre Anfrage!</h3>
@@ -59,6 +60,7 @@ export default function ContactForm() {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
       className="bg-white rounded-lg shadow-lg p-8"
+      key='contact-form'
     >
       <h3 className="text-2xl font-semibold text-gray-900 mb-6">Kontaktieren Sie uns</h3>
 

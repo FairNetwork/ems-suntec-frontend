@@ -9,6 +9,7 @@ export default function Impressum() {
             animate={{opacity: 1, y: 0}}
             transition={{duration: 0.6}}
             className="min-h-screen pt-20"
+            key='impressum'
         >
             <div className="max-w-4xl mx-auto p-6 text-black">
                 <h1 className="text-3xl font-bold mb-4">Impressum</h1>

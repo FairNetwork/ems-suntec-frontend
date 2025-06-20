@@ -12,6 +12,7 @@ export default function ContactPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="min-h-screen pt-20"
+      key='contact'
     >
       <PageHeader title="Kontakt" subtitle="Lassen Sie uns gemeinsam Ihre Energiezukunft planen" />
 

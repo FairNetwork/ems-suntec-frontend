@@ -14,6 +14,7 @@ export default function AboutPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="min-h-screen pt-20"
+      key='about'
     >
       <PageHeader title="Über Ems Suntec" subtitle="Ihre Experten für nachhaltige Energielösungen seit 2024" />
       <CompanyStory />

@@ -21,6 +21,7 @@ export default function ProjectsPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       className="min-h-screen pt-20"
+      key='projects'
     >
       <PageHeader title="Unsere Referenzen" subtitle="Über 500 erfolgreich realisierte Solarprojekte" />
 

@@ -14,6 +14,7 @@ export default function HomePage() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       className="min-h-screen"
+      key='home'
     >
       <HeroSection />
       <TrustIndicators />
