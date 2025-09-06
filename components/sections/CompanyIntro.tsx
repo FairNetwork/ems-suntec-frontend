@@ -26,8 +26,7 @@ export default function CompanyIntro() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Warum Ems Suntec?</h2>
             <p className="text-lg text-gray-600 mb-8">
-              Seit 2024 sind wir Ihr vertrauensvoller Partner für nachhaltige Energielösungen. Unser erfahrenes Team aus
-              Ingenieuren und Technikern plant und installiert Solaranlagen mit höchster Präzision und Qualität.
+                Wir sind Ihr Partner für nachhaltige Energielösungen. Unser erfahrenes Team plant und installiert Solaranlagen präzise, zuverlässig und in höchster Qualität.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -38,7 +37,7 @@ export default function CompanyIntro() {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Erfahrenes Team</h3>
                   <p className="text-gray-600">
-                    Über 20 zertifizierte Fachkräfte mit jahrelanger Erfahrung in der Solarbranche.
+                      Ein Team qualifizierter Dachdecker und Elektriker.
                   </p>
                 </div>
               </div>
@@ -61,7 +60,7 @@ export default function CompanyIntro() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">Persönliche Betreuung</h3>
-                  <p className="text-gray-600">Von der ersten Beratung bis zur Wartung - wir sind immer für Sie da.</p>
+                  <p className="text-gray-600">Die Solaranlage wird für die Inbetriebnahme fachgerecht gewartet.</p>
                 </div>
               </div>
             </div>
@@ -90,7 +89,7 @@ export default function CompanyIntro() {
               className="rounded-lg shadow-2xl"
             />
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
-              <div className="text-3xl font-bold text-primary">{years} {years === 1 ? 'Jahr' : 'Jahre'}</div>
+              <div className="text-3xl font-bold text-primary">Jahrzehnte</div>
               <div className="text-gray-600">Erfahrung</div>
             </div>
           </motion.div>

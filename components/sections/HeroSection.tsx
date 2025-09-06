@@ -43,7 +43,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Entdecken Sie die Kraft der Sonne und senken Sie Ihre Energiekosten um bis zu 90%. Über 500 zufriedene
+            Entdecken Sie die Kraft der Sonne und senken Sie Ihre Energiekosten. Viele zufriedene
             Kunden vertrauen bereits auf unsere Expertise.
           </motion.p>
 
@@ -74,37 +74,6 @@ export default function HeroSection() {
             </Button>
           </motion.div>
 
-          {/* Trust Indicators */}
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <div className="flex items-center justify-center space-x-3">
-              <Zap className="w-8 h-8 text-primary" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">500+</div>
-                <div className="text-sm text-gray-300">Installationen</div>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-center space-x-3">
-              <Shield className="w-8 h-8 text-primary" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">25 Jahre</div>
-                <div className="text-sm text-gray-300">Garantie</div>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-center space-x-3">
-              <Award className="w-8 h-8 text-primary" />
-              <div className="text-left">
-                <div className="text-2xl font-bold">98%</div>
-                <div className="text-sm text-gray-300">Zufriedenheit</div>
-              </div>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>
