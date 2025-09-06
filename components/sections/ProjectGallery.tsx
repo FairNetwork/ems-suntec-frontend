@@ -2,7 +2,7 @@
 
 import {motion} from "framer-motion"
 import {MapPin, Zap, Calendar, BatteryCharging, BatteryFull} from "lucide-react"
-import type {Project} from "@/hooks/useProjects"
+import {Project} from "@/constants/projects";
 
 interface ProjectGalleryProps {
     projects: Project[]
@@ -62,10 +62,10 @@ export default function ProjectGallery({projects, loading}: ProjectGalleryProps)
                                 <BatteryCharging className="w-4 h-4 mr-2"/>
                                 Mit Wallbox
                             </div>}
-                            <div className="flex items-center text-sm text-gray-500">
+                            {!!project.storage.length && <div className="flex items-center text-sm text-gray-500">
                                 <BatteryFull className="w-4 h-4 mr-2"/>
                                 {project.storage} Speicherkapazität
-                            </div>
+                            </div>}
                             <div className="flex items-center text-sm text-gray-500">
                                 <Calendar className="w-4 h-4 mr-2"/>
                                 Fertigstellung {project.year}

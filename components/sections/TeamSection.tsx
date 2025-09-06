@@ -9,16 +9,16 @@ const teamMembers = [
         position: "Geschäftsführer & Mitgründer",
         image: "/placeholder.svg?height=300&width=300",
         description: "Als staatlich geprüfter Techniker bringt Thomas jede Menge Erfahrung aus dem Elektrohandwerk mit. Neben seiner Rolle bei Ems Suntec führt er auch erfolgreich sein eigenes Unternehmen Elektro Harbering.",
-        phone: "#",
-        email: "t.harbering@ems-suntec.de"
+        phone: "tel:+4901622913008",
+        email: "thomas@ems-suntec.de"
     },
     {
         name: "Haiko Winter",
         position: "Geschäftsführer & Mitgründer",
         image: "/placeholder.svg?height=300&width=300",
         description: "Haiko ist seit der Gründung Teil von Ems Suntec und leitet das Unternehmen mit technischem Know-how und klarer Vision. Als Geschäftsführer ist er alleinvertretungsberechtigt und Ansprechpartner für strategische Fragen.",
-        phone: "#",
-        email: "h.winter@ems-suntec.de"
+        phone: "tel:+491797884043",
+        email: "haiko@ems-suntec.de"
     }
 ]
 

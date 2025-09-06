@@ -65,10 +65,10 @@ export default function Footer() {
                         <div className="space-y-3">
                             <div className="flex items-center space-x-3">
                                 <WhatsApp className="w-4 h-4 fill-primary"/>
-                                <span className="text-gray-400 text-sm"><span>Haiko Winter&nbsp;</span><span onClick={()=> window.open("tel:+49 179 7884043")} className="cursor-pointer">+49 179 7884043</span></span>
+                                <span className="text-gray-400 text-sm"><span>Haiko Winter&nbsp;</span><span onClick={()=> window.open("tel:+491797884043")} className="cursor-pointer">+49 179 7884043</span></span>
                             </div><div className="flex items-center space-x-3">
                             <WhatsApp className="w-4 h-4 fill-primary"/>
-                                <span className="text-gray-400 text-sm"><span>Thomas Harbering&nbsp;</span><span onClick={()=> window.open("tel:+49 179 7884043")} className="cursor-pointer">+49 179 7884043</span></span>
+                                <span className="text-gray-400 text-sm"><span>Thomas Harbering&nbsp;</span><span onClick={()=> window.open("tel:+4901622913008")} className="cursor-pointer">+49 0162 2913008</span></span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="w-4 h-4 text-primary"/>
