@@ -29,8 +29,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <Sun className="w-5 h-5 text-white" />
+            <div className="w-12 h-12  flex items-center justify-center">
+              <img className="w-12 h-12 text-white" src="/emsstec_logo.svg" alt="logo" />
             </div>
             <span className="text-xl font-bold text-gray-900">Ems Suntec</span>
           </Link>
@@ -52,7 +52,7 @@ export default function Header() {
               asChild
               className="bg-primary hover:primary"
             >
-              <Link href="/contact">Beratung anfragen</Link>
+              <Link href="/contact">Anlage anfragen</Link>
             </Button>
           </nav>
 

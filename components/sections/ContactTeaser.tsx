@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import Link from "next/link"
 import { ArrowRight, Phone, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import {WhatsApp} from "@/components/ui/whatsapp-icon";
 
 export default function ContactTeaser() {
   return (
@@ -37,17 +38,23 @@ export default function ContactTeaser() {
               className="border-white text-black hover:bg-white hover:text-black px-8 py-4"
             >
               <Link href="tel:+491797884043">
-                <Phone className="mr-2 w-4 h-4" />
-                Jetzt anrufen
+                <WhatsApp className="mr-2 w-4 h-4" />
+                Haiko Winter
+              </Link>
+            </Button><Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-white text-black hover:bg-white hover:text-black px-8 py-4"
+            >
+              <Link href="tel:+491797884043">
+                <WhatsApp className="mr-2 w-4 h-4" />
+                  Thomas Harbering
               </Link>
             </Button>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4" />
-              <span>+49 179 7884043</span>
-            </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
               <span>info@ems-suntec.de</span>
