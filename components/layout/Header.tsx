@@ -26,7 +26,7 @@ export default function Header() {
             initial={{y: -100}}
             animate={{y: 0}}
             transition={{duration: 0.6}}
-            className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200"
+            className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 w-[100vw]"
         >
             <SolarPlannerDialog open={isDialogOpen} onOpenChange={setIsDialogOpen}/>
             <div className="container mx-auto px-4">
@@ -73,7 +73,7 @@ export default function Header() {
                             initial={{opacity: 0, height: 0}}
                             animate={{opacity: 1, height: "auto"}}
                             exit={{opacity: 0, height: 0}}
-                            className="md:hidden border-t border-gray-200 py-4"
+                            className="md:hidden border-t border-gray-200 py-4 overflow-hidden"
                         >
                             <div className="flex flex-col space-y-4">
                                 {navigationItems.map((item) => (
