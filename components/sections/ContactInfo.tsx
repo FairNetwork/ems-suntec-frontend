@@ -1,14 +1,22 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Phone, Mail, MapPin, Clock } from "lucide-react"
+import { Mail, MapPin, Clock } from "lucide-react"
+import {WhatsApp} from "@/components/ui/whatsapp-icon";
 
 const contactDetails = [
   {
-    icon: Phone,
-    title: "Telefon",
+    icon: WhatsApp,
+    title: "Haiko Winter",
     content: "+49 179 7884043",
     link: "tel:+491797884043",
+      withFill: true,
+  },{
+    icon: WhatsApp,
+    title: "Thomas Harbering",
+    content: "+49 179 7884043",
+    link: "tel:+491797884043",
+        withFill: true,
   },
   {
     icon: Mail,
@@ -51,7 +59,9 @@ export default function ContactInfo() {
           className="flex items-start space-x-4"
         >
           <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
-            <detail.icon className="w-6 h-6 text-primary" />
+              <detail.icon
+                  className={`w-6 h-6 text-primary ${detail.withFill ? "fill-primary" : ""}`}
+              />
           </div>
           <div>
             <h4 className="text-lg font-semibold text-gray-900 mb-1">{detail.title}</h4>

@@ -1,26 +1,27 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Linkedin, Mail } from "lucide-react"
+import { Mail, Phone} from "lucide-react"
 
 const teamMembers = [
-  {
-    name: "Thomas Harbering",
-    position: "Geschäftsführer & Mitgründer",
-    image: "/placeholder.svg?height=300&width=300",
-    description: "Elektroingenieur, Inhaber Elektro Harbering & Geschäftsführer von Ems Suntec.",
-    linkedin: "#",
-    email: "t.harbering@ems-suntec.de"
-  },
-  {
-    name: "Haiko Winter",
-    position: "Geschäftsführer & Mitgründer",
-    image: "/placeholder.svg?height=300&width=300",
-    description: "Geschäftsführer mit technischem Hintergrund und alleinvertretungsberechtigt seit Gründung.",
-    linkedin: "#",
-    email: "h.winter@ems-suntec.de"
-  }
+    {
+        name: "Thomas Harbering",
+        position: "Geschäftsführer & Mitgründer",
+        image: "/placeholder.svg?height=300&width=300",
+        description: "Als staatlich geprüfter Techniker bringt Thomas jede Menge Erfahrung aus dem Elektrohandwerk mit. Neben seiner Rolle bei Ems Suntec führt er auch erfolgreich sein eigenes Unternehmen Elektro Harbering.",
+        phone: "#",
+        email: "t.harbering@ems-suntec.de"
+    },
+    {
+        name: "Haiko Winter",
+        position: "Geschäftsführer & Mitgründer",
+        image: "/placeholder.svg?height=300&width=300",
+        description: "Haiko ist seit der Gründung Teil von Ems Suntec und leitet das Unternehmen mit technischem Know-how und klarer Vision. Als Geschäftsführer ist er alleinvertretungsberechtigt und Ansprechpartner für strategische Fragen.",
+        phone: "#",
+        email: "h.winter@ems-suntec.de"
+    }
 ]
+
 
 export default function TeamSection() {
   return (
@@ -33,13 +34,13 @@ export default function TeamSection() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Unser Team</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Ems Suntec</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Lernen Sie die Experten kennen, die Ihre Solaranlage planen und installieren.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="flex items-center justify-center gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
@@ -56,10 +57,10 @@ export default function TeamSection() {
                 <p className="text-gray-600 mb-4">{member.description}</p>
                 <div className="flex justify-center space-x-4">
                   <a
-                    href={member.linkedin}
+                    href={member.phone}
                     className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                   >
-                    <Linkedin className="w-5 h-5" />
+                    <Phone className="w-5 h-5" />
                   </a>
                   <a
                     href={`mailto:${member.email}`}
