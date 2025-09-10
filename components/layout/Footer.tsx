@@ -20,12 +20,17 @@ export default function Footer() {
                         <p className="text-gray-400 text-sm">
                             Photovoltaik im Kreis Steinfurt
                         </p>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                        <ul className="text-gray-400 text-sm list-disc list-inside">
+                            <li>Steinfurt</li>
+                            <li>Greven</li>
+                            <li>Altenberge</li>
+                            <li>Nordwalde</li>
+                            <li>Saerbeck</li>
+                            <li>Rheine</li>
+                            <li>Emsdetten</li>
+                            <li>Münster</li>
+                            <li>Wettringen</li>
+                            <li>Ochtrup</li>
                         </ul>
                     </div>
 
@@ -92,7 +97,7 @@ export default function Footer() {
                                 <Facebook className="w-5 h-5"/>
                             </a>
                             <a
-                                href="#"
+                                href="https://www.instagram.com/ems.suntec?igsh=MTMzMTBvZThpcGRqbA=="
                                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
                             >
                                 <Instagram className="w-5 h-5"/>
