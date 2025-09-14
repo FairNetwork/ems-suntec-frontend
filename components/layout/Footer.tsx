@@ -111,7 +111,7 @@ export default function Footer() {
                             <div className="self-end text-[#66FF06]">
                                 powered by
                             </div>
-                            <a href="https://elektro-harbering.de/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://elektro-harbering.de/" target="_blank" rel="noopener noreferrer" className="self-end w-[160px]">
                                 <img src="/eh_logo.png" alt="Logo" className="self-end w-[160px]" />
                             </a>
 
