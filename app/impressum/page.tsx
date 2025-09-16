@@ -16,7 +16,7 @@ export default function Impressum() {
 
                 <section className="mb-6">
                     <h2 className="text-xl font-semibold">Angaben gemäß § 5 TMG</h2>
-                    <p>Ems Suntec UG (haftungsbeschränkt)</p>
+                    <p>Ems Suntec GmbH</p>
                     <p>Diekstraße 23</p>
                     <p>48282 Emsdetten</p>
                     <p>Deutschland</p>

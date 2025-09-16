@@ -42,7 +42,7 @@ export default function CompanyStory() {
                         className="relative"
                     >
                         <img
-                            src="/placeholder.svg?height=500&width=600"
+                            src="/persons/Team.jpg"
                             alt="SolarTech Solutions Firmengebäude"
                             className="rounded-lg shadow-2xl"
                         />

@@ -56,7 +56,7 @@ export default function Header() {
                             asChild
                             className="bg-primary hover:primary cursor-pointer"
                         >
-                            <div onClick={()=> setIsDialogOpen(true)}>Anlage anfragen</div>
+                            <div onClick={()=> setIsDialogOpen(true)}>PV-Anlagenplaner</div>
                         </Button>
                     </nav>
 
@@ -96,7 +96,7 @@ export default function Header() {
                                         setIsMenuOpen(false);
                                         setIsDialogOpen(true)
                                     }}>
-                                        Anlage anfragen
+                                        PV-Anlagenplaner
                                     </div>
                                 </Button>
                             </div>
