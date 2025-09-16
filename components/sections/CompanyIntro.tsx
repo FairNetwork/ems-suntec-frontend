@@ -84,7 +84,7 @@ export default function CompanyIntro() {
             className="relative"
           >
             <img
-              src="/placeholder.svg?height=600&width=800"
+              src="/inovation.png"
               alt="SolarTech Team bei der Arbeit"
               className="rounded-lg shadow-2xl"
             />
