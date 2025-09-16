@@ -56,7 +56,7 @@ export default function ProjectGallery({projects, loading}: ProjectGalleryProps)
                             </div>
                             <div className="flex items-center text-sm text-gray-500">
                                 <Zap className="w-4 h-4 mr-2"/>
-                                {project.power} kWp Leistung
+                                {project.power.toLocaleString('de-DE')} kWp Leistung
                             </div>
                             {project.wallbox && <div className="flex items-center text-sm text-gray-500">
                                 <BatteryCharging className="w-4 h-4 mr-2"/>
@@ -64,7 +64,7 @@ export default function ProjectGallery({projects, loading}: ProjectGalleryProps)
                             </div>}
                             {!!project.storage.length && <div className="flex items-center text-sm text-gray-500">
                                 <BatteryFull className="w-4 h-4 mr-2"/>
-                                {project.storage} Speicherkapazität
+                                {project.storage} kWh Speicherkapazität
                             </div>}
                             <div className="flex items-center text-sm text-gray-500">
                                 <Calendar className="w-4 h-4 mr-2"/>
