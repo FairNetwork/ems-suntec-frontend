@@ -73,7 +73,7 @@ export default function Footer() {
                                 <span className="text-gray-400 text-sm"><span>Haiko Winter&nbsp;</span><span onClick={()=> window.open("tel:+491797884043")} className="cursor-pointer">+49 179 7884043</span></span>
                             </div><div className="flex items-center space-x-3">
                             <WhatsApp className="w-4 h-4 fill-primary"/>
-                                <span className="text-gray-400 text-sm"><span>Thomas Harbering&nbsp;</span><span onClick={()=> window.open("tel:+4901622913008")} className="cursor-pointer">+49 0162 2913008</span></span>
+                                <span className="text-gray-400 text-sm"><span>Thomas Harbering&nbsp;</span><span onClick={()=> window.open("tel:+491622913008")} className="cursor-pointer">+49 162 2913008</span></span>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="w-4 h-4 text-primary"/>
@@ -92,7 +92,7 @@ export default function Footer() {
 
                         <div className="flex space-x-4">
                             <a
-                                href="https://www.facebook.com/share/17MggHrUxV/?mibextid=wwXIfr"
+                                href="https://www.facebook.com/people/Ems-Suntec-GmbH/61580646570250/"
                                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
                             >
                                 <Facebook className="w-5 h-5"/>

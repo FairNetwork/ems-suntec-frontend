@@ -23,7 +23,7 @@ export default function ProjectsPage() {
       className="min-h-screen pt-20"
       key='projects'
     >
-      <PageHeader title="Unsere Referenzen" subtitle="Unsere erfolgreich realisierten Solarprojekte" />
+      <PageHeader title="Unsere Referenzen" subtitle="Unsere erfolgreich realisierten Projekte" />
 
       <div className="container mx-auto px-4 py-12">
         {/*<ProjectFilter activeFilter={activeFilter} onFilterChange={setActiveFilter} />*/}
