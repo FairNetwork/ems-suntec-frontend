@@ -17,7 +17,7 @@ const values = [
   {
     icon: Users,
     title: "Partnerschaft",
-    description: "Wir begleiten unsere Kunden von der ersten Beratung bis zur langfristigen Wartung.",
+    description: "Wir begleiten unsere Kunden von der ersten Beratung bis zur Fertigstellung.",
   },
   {
     icon: Lightbulb,

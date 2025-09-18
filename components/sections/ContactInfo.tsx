@@ -14,8 +14,8 @@ const contactDetails = [
   },{
     icon: WhatsApp,
     title: "Thomas Harbering",
-    content: "+49 0162 2913008",
-    link: "tel:+4901622913008",
+    content: "+49 162 2913008",
+    link: "tel:+491622913008",
         withFill: true,
   },
   {

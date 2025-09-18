@@ -16,10 +16,10 @@ export default function CompanyStory() {
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Unsere Geschichte</h2>
                         <div className="space-y-4 text-gray-600">
                             <p>
-                                Ems Suntec wurde 2024 von Thomas Harbering und Haiko Winter gegründet – mit dem Ziel,
-                                das Münsterland mit hochwertigen Photovoltaiklösungen zu versorgen und aktiv zur
-                                Energiewende beizutragen. Aus einer regionalen Idee ist ein moderner Dienstleister für
-                                Solartechnik entstanden.
+                                Das Münsterland mit hochwertigen Photovoltaiklösungen zu versorgen und aktiv zur
+                                Energiewende beizutragen war unser Ziel. Deshalb gründeten wir, das sind Thomas
+                                Harbering und Haiko Winter, die Ems Suntec im Jahr 2024. Aus dieser Idee ist ein
+                                moderner Dienstleister für Solartechnik entstanden.
                             </p>
                             <p>
                                 Seitdem konnten wir zahlreiche Projekte erfolgreich umsetzen. Qualität, Verlässlichkeit
@@ -27,7 +27,7 @@ export default function CompanyStory() {
                             </p>
                             <p>
                                 Mit einem engagierten Team begleiten wir unsere Kundinnen und Kunden von der ersten
-                                Planung bis zur Inbetriebnahme – und schaffen so Schritt für Schritt mehr
+                                Planung bis zur Inbetriebnahme und schaffen so Schritt für Schritt mehr
                                 Energieunabhängigkeit und eine nachhaltige Zukunft.
                             </p>
 
