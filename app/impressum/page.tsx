@@ -29,7 +29,8 @@ export default function Impressum() {
 
                 <section className="mb-6">
                     <h2 className="text-xl font-semibold">Kontakt</h2>
-                    <p>Telefon: +49 179 7884043</p>
+                    <p>Haiko Winter +49 179 7884043</p>
+                    <p>Thomas Harbering +49 162 2913008</p>
                     <p>E-Mail: info@ems-suntec.de</p>
                     <p>Website: <a href="https://ems-suntec.de"
                                    className="text-[#03DAC5] underline">https://ems-suntec.de</a></p>
@@ -45,17 +46,18 @@ export default function Impressum() {
                 <section className="mb-6">
                     <h2 className="text-xl font-semibold">Umsatzsteuer-ID</h2>
                     <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:</p>
-                    <p>311/5826/1033</p>
+                    <p>DE417376927</p>
                 </section>
 
                 <section className="mb-6">
                     <h2 className="text-xl font-semibold">Berufshaftpflichtversicherung</h2>
-                    <p>Name und Anschrift der Versicherung</p>
+                    <p>LVIM Versicherung, Postfach 101, 48126 Münster</p>
                     <p>Geltungsraum der Versicherung: Deutschland</p>
                 </section>
 
                 <section className="mb-6">
                     <h2 className="text-xl font-semibold">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+                    <p>Haiko Winter</p>
                     <p>Thomas Harbering</p>
                     <p>Adresse wie oben</p>
                 </section>

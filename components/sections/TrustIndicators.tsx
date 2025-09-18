@@ -8,7 +8,7 @@ const indicators = [
         icon: Star,
         value: "",
         label: "Kundenbewertung",
-        description: "Hohe Zufriedenheit bei unseren Kunden",
+        description: "Hohe Zufriedenheit bei unseren Kunden.\n Google-Bewertungen ansehen.",
         link: "https://www.google.com/search?sca_esv=deb7502a4a88900f&rlz=1C1CHBF_deDE1178DE1178&tbm=lcl&sxsrf=AE3TifM1BVFwWlW2kNJdNtA7wL1ftZYAVA:1757144056755&q=Ems+Suntec+GmbH+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxI2MrAwNrY0N7Y0MjE0sjQyNTcx38DI-IpR3DW3WCG4NK8kNVnBPTfJQyEotSwztbx4ESsuGQA8M3FNTgAAAA&rldimm=2083397392412925747&hl=en-DE&sa=X&ved=2ahUKEwiXysnaz8OPAxUaRvEDHc9wBfwQ9fQKegQITBAF&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews",
     },
     {
@@ -21,7 +21,7 @@ const indicators = [
         icon: Award,
         value: "",
         label: "Garantie",
-        description: "Leistungsgarantie auf ausgewählte Komponenten",
+        description: "Qualitätsprodukte Leistungsgarantien auf ausgewählte Komponenten",
     },
     {
         icon: LucideSparkle,
@@ -50,7 +50,8 @@ export default function TrustIndicators() {
                             whileInView={{opacity: 1, y: 0}}
                             transition={{duration: 0.6, delay: index * 0.1}}
                             viewport={{once: true}}
-                            className="text-center"
+                            className={`text-center ${indicator.link ? " decoration-2 cursor-pointer" : ""}`}
+                            onClick={() => handleClick(indicator.link)}
                         >
                             <div
                                 className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
@@ -58,8 +59,8 @@ export default function TrustIndicators() {
                             </div>
                             <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{indicator.value}</div>
                             <div
-                                className={`text-sm font-medium text-gray-900 mb-1 ${indicator.link ? " decoration-2 cursor-pointer" : ""}`}
-                                onClick={() => handleClick(indicator.link)}>{indicator.label}</div>
+                                className={`text-sm font-medium text-gray-900 mb-1`}
+                               >{indicator.label}</div>
                             <div className="text-xs text-gray-500">{indicator.description}</div>
                         </motion.div>
                     ))}
