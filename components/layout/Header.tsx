@@ -7,6 +7,7 @@ import {usePathname} from "next/navigation"
 import {Menu, X, Sun} from "lucide-react"
 import {Button} from "@/components/ui/button"
 import {SolarPlannerDialog} from "@/components/planner/solar-planner-dialog";
+import {SolarPanelIcon} from "@/components/planner/planer-icon";
 
 const navigationItems = [
     {href: "/", label: "Home"},
@@ -56,7 +57,10 @@ export default function Header() {
                             asChild
                             className="bg-primary hover:primary cursor-pointer"
                         >
-                            <div onClick={()=> setIsDialogOpen(true)}>PV-Anlagenplaner</div>
+                            <div>
+                                <SolarPanelIcon/>
+                                <div onClick={() => setIsDialogOpen(true)}>PV-Anlagenplaner</div>
+                            </div>
                         </Button>
                     </nav>
 
@@ -92,11 +96,14 @@ export default function Header() {
                                     asChild
                                     className="bg-primary hover:primary w-fit"
                                 >
-                                    <div onClick={() => {
-                                        setIsMenuOpen(false);
-                                        setIsDialogOpen(true)
-                                    }}>
-                                        PV-Anlagenplaner
+                                    <div>
+                                        <SolarPanelIcon/>
+                                        <div onClick={() => {
+                                            setIsMenuOpen(false);
+                                            setIsDialogOpen(true)
+                                        }}>
+                                            PV-Anlagenplaner
+                                        </div>
                                     </div>
                                 </Button>
                             </div>

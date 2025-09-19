@@ -6,6 +6,7 @@ import {ArrowRight, Zap, Shield, Award} from "lucide-react"
 import {Button} from "@/components/ui/button"
 import {SolarPlannerDialog} from "@/components/planner/solar-planner-dialog";
 import {useState} from "react";
+import {SolarPanelIcon} from "@/components/planner/planer-icon";
 
 export default function HeroSection() {
     const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -87,12 +88,16 @@ export default function HeroSection() {
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.8, delay: 0.6}}
                     >
-                    <Button
-                        asChild
-                        className="bg-primary hover:primary cursor-pointer"
-                    >
-                        <div onClick={()=> setIsDialogOpen(true)}>PV-Anlagenplaner</div>
-                    </Button>
+                        <Button
+                            asChild
+                            size="lg"
+                            className="bg-primary hover:primary cursor-pointer text-white font-semibold px-8 py-4 text-lg"
+                        >
+                            <div>
+                                <SolarPanelIcon/>
+                                <div onClick={() => setIsDialogOpen(true)}>PV-Anlagenplaner</div>
+                            </div>
+                        </Button>
                     </motion.div>
                 </motion.div>
             </div>

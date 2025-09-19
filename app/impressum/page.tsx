@@ -51,7 +51,7 @@ export default function Impressum() {
 
                 <section className="mb-6">
                     <h2 className="text-xl font-semibold">Berufshaftpflichtversicherung</h2>
-                    <p>LVIM Versicherung, Postfach 101, 48126 Münster</p>
+                    <p>LVM Versicherung, Postfach 101, 48126 Münster</p>
                     <p>Geltungsraum der Versicherung: Deutschland</p>
                 </section>
 
