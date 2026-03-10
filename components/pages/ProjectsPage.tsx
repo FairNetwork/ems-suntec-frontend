@@ -1,0 +1,35 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { useState } from "react"
+import PageHeader from "@/components/ui/PageHeader"
+import ProjectGallery from "@/components/sections/ProjectGallery"
+import ContactTeaser from "@/components/sections/ContactTeaser"
+import { useProjects } from "@/hooks/useProjects"
+import { defaultLandingPageContent } from "@/constants/landing-pages"
+
+export default function ProjectsPage() {
+  const [activeFilter] = useState("all")
+  const { projects, loading } = useProjects()
+
+  const filteredProjects =
+    activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter)
+
+  return (
+    <motion.main
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="min-h-screen pt-20"
+      key="projects"
+    >
+      <PageHeader title="Unsere Referenzen" subtitle="Unsere erfolgreich realisierten Projekte" />
+
+      <div className="container mx-auto px-4 py-12">
+        <ProjectGallery projects={filteredProjects} loading={loading} />
+      </div>
+
+      <ContactTeaser content={defaultLandingPageContent.contactTeaser} />
+    </motion.main>
+  )
+}

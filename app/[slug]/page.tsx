@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import LandingPage from "@/components/pages/LandingPage"
 import { localLandingPages, localLandingPagesBySlug } from "@/constants/landing-pages"
+import { buildLocalLandingMetadata } from "@/constants/seo"
 
 type LocalLandingPageProps = {
   params: Promise<{
@@ -25,13 +26,7 @@ export async function generateMetadata({ params }: LocalLandingPageProps): Promi
     return {}
   }
 
-  return {
-    title: landingPage.metadata.title,
-    description: landingPage.metadata.description,
-    alternates: {
-      canonical: `/${landingPage.slug}`,
-    },
-  }
+  return buildLocalLandingMetadata(landingPage)
 }
 
 export default async function LocalLandingPage({ params }: LocalLandingPageProps) {

@@ -1,27 +1,21 @@
-"use client"
+import AboutPage from "@/components/pages/AboutPage"
+import { buildPageMetadata } from "@/constants/seo"
 
-import { motion } from "framer-motion"
-import PageHeader from "@/components/ui/PageHeader"
-import TeamSection from "@/components/sections/TeamSection"
-import ValuesSection from "@/components/sections/ValuesSection"
-import CompanyStory from "@/components/sections/CompanyStory"
-import ContactTeaser from "@/components/sections/ContactTeaser"
-import { defaultLandingPageContent } from "@/constants/landing-pages"
+export const metadata = buildPageMetadata({
+  title: "Über Ems Suntec | Photovoltaik-Experten aus Emsdetten",
+  description:
+    "Lernen Sie Ems Suntec kennen: Ihr regionaler Fachbetrieb fuer Photovoltaik, PV-Anlagen und nachhaltige Energielösungen im Kreis Steinfurt und in Muenster.",
+  path: "/about",
+  keywords: [
+    "ueber Ems Suntec",
+    "Photovoltaik Unternehmen Emsdetten",
+    "Solarfirma Kreis Steinfurt",
+    "PV Experten Muensterland",
+    "Photovoltaik Fachbetrieb",
+    "Solarteur Emsdetten",
+  ],
+})
 
-export default function AboutPage() {
-  return (
-    <motion.main
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="min-h-screen pt-20"
-      key='about'
-    >
-      <PageHeader title="Über Ems Suntec" subtitle="Ihre Experten für nachhaltige Energielösungen seit 2024" />
-      <CompanyStory />
-      <ValuesSection />
-      <TeamSection />
-      <ContactTeaser content={defaultLandingPageContent.contactTeaser} />
-    </motion.main>
-  )
+export default function AboutRoute() {
+  return <AboutPage />
 }
