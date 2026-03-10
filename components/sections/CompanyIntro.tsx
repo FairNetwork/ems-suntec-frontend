@@ -71,7 +71,7 @@ export default function CompanyIntro({content}: CompanyIntroProps) {
                             className="rounded-lg shadow-2xl"
                         />
                         <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-lg shadow-lg">
-                            <div className="text-3xl font-bold text-primary">{content.experienceLabel}</div>
+                            <div className="text-3xl font-bold text-primary">Jahrzehnte</div>
                             <div className="text-gray-600">Erfahrung</div>
                         </div>
                     </motion.div>
