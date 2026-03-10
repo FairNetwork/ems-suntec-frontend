@@ -5,8 +5,13 @@ import Link from "next/link"
 import {ArrowRight} from "lucide-react"
 import {Button} from "@/components/ui/button"
 import {useProjects} from "@/hooks/useProjects"
+import type { ProjectTeaserContent } from "@/constants/landing-pages"
 
-export default function ProjectTeaser() {
+type ProjectTeaserProps = {
+    content: ProjectTeaserContent
+}
+
+export default function ProjectTeaser({content}: ProjectTeaserProps) {
     const {projects} = useProjects()
     const featuredProjects = projects.slice(0, 3)
 
@@ -20,11 +25,9 @@ export default function ProjectTeaser() {
                     viewport={{once: true}}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Unsere neuesten Projekte</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{content.heading}</h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Entdecken Sie eine Auswahl unserer erfolgreich realisierten Solarprojekte und lassen Sie sich
-                        von der
-                        Vielfalt unserer Lösungen inspirieren.
+                        {content.description}
                     </p>
                 </motion.div>
 

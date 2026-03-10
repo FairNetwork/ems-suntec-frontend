@@ -2,13 +2,35 @@
 
 import {motion} from "framer-motion"
 import Link from "next/link"
-import {ArrowRight, Zap, Shield, Award} from "lucide-react"
+import {ArrowRight} from "lucide-react"
 import {Button} from "@/components/ui/button"
 import {SolarPlannerDialog} from "@/components/planner/solar-planner-dialog";
 import {useState} from "react";
 import {SolarPanelIcon} from "@/components/planner/planer-icon";
+import type { HeroContent } from "@/constants/landing-pages";
 
-export default function HeroSection() {
+type HeroSectionProps = {
+    content: HeroContent
+}
+
+function renderHighlightedTitle(title: string, highlightedWord?: string) {
+    if (!highlightedWord || !title.includes(highlightedWord)) {
+        return title
+    }
+
+    const [before, ...afterParts] = title.split(highlightedWord)
+    const after = afterParts.join(highlightedWord)
+
+    return (
+        <>
+            {before}
+            <span className="bg-primary bg-clip-text text-transparent">{highlightedWord}</span>
+            {after}
+        </>
+    )
+}
+
+export default function HeroSection({content}: HeroSectionProps) {
     const [isDialogOpen, setIsDialogOpen] = useState(false);
 
     return (
@@ -40,8 +62,7 @@ export default function HeroSection() {
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.8, delay: 0.2}}
                     >
-                        Ihre Zukunft ist{" "}
-                        <span className="bg-primary bg-clip-text text-transparent">solar</span>
+                        {renderHighlightedTitle(content.title, content.highlightedWord)}
                     </motion.h1>
 
                     <motion.p
@@ -50,9 +71,7 @@ export default function HeroSection() {
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.8, delay: 0.4}}
                     >
-                        Entdecken Sie die Kraft der Sonne und nutzen Sie die nachhaltige Stromerzeugung, um Ihre
-                        dauerhaften Energiekosten zu senken. Eine stetig wachsende Zahl zufriedener Kunden vertraut
-                        bereits auf unsere Expertise.
+                        {content.description}
                     </motion.p>
 
                     <motion.div

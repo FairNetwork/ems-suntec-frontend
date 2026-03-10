@@ -6,6 +6,7 @@ import TeamSection from "@/components/sections/TeamSection"
 import ValuesSection from "@/components/sections/ValuesSection"
 import CompanyStory from "@/components/sections/CompanyStory"
 import ContactTeaser from "@/components/sections/ContactTeaser"
+import { defaultLandingPageContent } from "@/constants/landing-pages"
 
 export default function AboutPage() {
   return (
@@ -20,7 +21,7 @@ export default function AboutPage() {
       <CompanyStory />
       <ValuesSection />
       <TeamSection />
-      <ContactTeaser />
+      <ContactTeaser content={defaultLandingPageContent.contactTeaser} />
     </motion.main>
   )
 }

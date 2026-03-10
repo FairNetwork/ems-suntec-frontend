@@ -7,6 +7,7 @@ import ProjectGallery from "@/components/sections/ProjectGallery"
 import ProjectFilter from "@/components/ui/ProjectFilter"
 import ContactTeaser from "@/components/sections/ContactTeaser"
 import { useProjects } from "@/hooks/useProjects"
+import { defaultLandingPageContent } from "@/constants/landing-pages"
 
 export default function ProjectsPage() {
   const [activeFilter, setActiveFilter] = useState("all")
@@ -30,7 +31,7 @@ export default function ProjectsPage() {
         <ProjectGallery projects={filteredProjects} loading={loading} />
       </div>
 
-      <ContactTeaser />
+      <ContactTeaser content={defaultLandingPageContent.contactTeaser} />
     </motion.main>
   )
 }
