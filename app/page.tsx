@@ -1,26 +1,23 @@
-"use client"
+import LandingPage from "@/components/pages/LandingPage"
+import { defaultLandingPageContent } from "@/constants/landing-pages"
+import { buildPageMetadata } from "@/constants/seo"
 
-import { motion } from "framer-motion"
-import HeroSection from "@/components/sections/HeroSection"
-import CompanyIntro from "@/components/sections/CompanyIntro"
-import ProjectTeaser from "@/components/sections/ProjectTeaser"
-import ContactTeaser from "@/components/sections/ContactTeaser"
-import TrustIndicators from "@/components/sections/TrustIndicators"
+export const metadata = buildPageMetadata({
+  title: "Photovoltaik im Kreis Steinfurt | PV-Anlagen von Ems Suntec",
+  description:
+    "Ems Suntec plant und installiert Photovoltaik und PV-Anlagen im Kreis Steinfurt und in Muenster. Jetzt kostenlose Beratung fuer Ihre Solaranlage anfragen.",
+  path: "/",
+  keywords: [
+    "Photovoltaik Kreis Steinfurt",
+    "PV Anlage Kreis Steinfurt",
+    "Solaranlage Emsdetten",
+    "Photovoltaik Muenster",
+    "Solarteur Rheine",
+    "PV Beratung Greven",
+    "Photovoltaik Steinfurt",
+  ],
+})
 
 export default function HomePage() {
-  return (
-    <motion.main
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.6 }}
-      className="min-h-screen"
-      key='home'
-    >
-      <HeroSection />
-      <TrustIndicators />
-      <CompanyIntro />
-      <ProjectTeaser />
-      <ContactTeaser />
-    </motion.main>
-  )
+  return <LandingPage content={defaultLandingPageContent} pageKey="home" />
 }

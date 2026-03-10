@@ -1,5 +1,6 @@
 "use client"
 
+import type React from "react"
 import { useState } from "react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Progress } from "@/components/ui/progress"
@@ -79,14 +80,27 @@ const initialFormData: FormData = {
   contactConsent: false,
 }
 
-const steps = [
-  { id: 1, title: "Gebäude", component: BuildingStep },
-  { id: 2, title: "Energie", component: EnergyStep },
-  { id: 3, title: "Wünsche", component: WishesStep },
-  { id: 4, title: "Adresse", component: AddressStep },
-  { id: 5, title: "Persönlich", component: PersonalStep },
-  { id: 6, title: "Datenschutz", component: PrivacyStep },
-  { id: 7, title: "Zusammenfassung", component: SummaryStep },
+type StepComponentProps = {
+  formData: FormData
+  updateFormData: (updates: Partial<FormData>) => void
+  onNext?: () => void
+  onReset?: () => void
+}
+
+type PlannerStep = {
+  id: number
+  title: string
+  component: React.ComponentType<StepComponentProps>
+}
+
+const steps: PlannerStep[] = [
+  { id: 1, title: "Gebäude", component: BuildingStep as React.ComponentType<StepComponentProps> },
+  { id: 2, title: "Energie", component: EnergyStep as React.ComponentType<StepComponentProps> },
+  { id: 3, title: "Wünsche", component: WishesStep as React.ComponentType<StepComponentProps> },
+  { id: 4, title: "Adresse", component: AddressStep as React.ComponentType<StepComponentProps> },
+  { id: 5, title: "Persönlich", component: PersonalStep as React.ComponentType<StepComponentProps> },
+  { id: 6, title: "Datenschutz", component: PrivacyStep as React.ComponentType<StepComponentProps> },
+  { id: 7, title: "Zusammenfassung", component: SummaryStep as React.ComponentType<StepComponentProps> },
 ]
 
 interface SolarPlannerDialogProps {

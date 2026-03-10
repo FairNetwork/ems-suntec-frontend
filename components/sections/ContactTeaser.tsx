@@ -2,11 +2,16 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { ArrowRight, Phone, Mail } from "lucide-react"
+import { ArrowRight, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import {WhatsApp} from "@/components/ui/whatsapp-icon";
+import type { ContactTeaserContent } from "@/constants/landing-pages";
 
-export default function ContactTeaser() {
+type ContactTeaserProps = {
+  content: ContactTeaserContent
+}
+
+export default function ContactTeaser({ content }: ContactTeaserProps) {
   return (
     <section className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
@@ -17,10 +22,9 @@ export default function ContactTeaser() {
           viewport={{ once: true }}
           className="text-center text-white"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Bereit für Ihre Solaranlage?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{content.heading}</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Lassen Sie uns gemeinsam Ihre Energiezukunft planen. Kontaktieren Sie uns für eine kostenlose und
-            unverbindliche Beratung.
+            {content.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
