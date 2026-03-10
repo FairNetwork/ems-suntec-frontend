@@ -20,6 +20,14 @@ export default function ProjectGallery({projects, loading}: ProjectGalleryProps)
         )
     }
 
+    if (!projects.length) {
+        return (
+            <div className="rounded-2xl border border-gray-200 bg-gray-50 px-6 py-12 text-center text-gray-600">
+                Für diesen Ort sind aktuell noch keine Referenzprojekte hinterlegt.
+            </div>
+        )
+    }
+
     return (
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (

@@ -11,9 +11,10 @@ import type { LandingPageContent } from "@/constants/landing-pages"
 type LandingPageProps = {
   content: LandingPageContent
   pageKey: string
+  projectFilterKey?: string
 }
 
-export default function LandingPage({ content, pageKey }: LandingPageProps) {
+export default function LandingPage({ content, pageKey, projectFilterKey }: LandingPageProps) {
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -25,7 +26,7 @@ export default function LandingPage({ content, pageKey }: LandingPageProps) {
       <HeroSection content={content.hero} />
       <TrustIndicators />
       <CompanyIntro content={content.companyIntro} />
-      <ProjectTeaser content={content.projectTeaser} />
+      <ProjectTeaser content={content.projectTeaser} projectFilterKey={projectFilterKey} />
       <ContactTeaser content={content.contactTeaser} />
     </motion.main>
   )

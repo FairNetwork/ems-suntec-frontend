@@ -37,5 +37,11 @@ export default async function LocalLandingPage({ params }: LocalLandingPageProps
     notFound()
   }
 
-  return <LandingPage content={landingPage.content} pageKey={landingPage.slug} />
+  return (
+    <LandingPage
+      content={landingPage.content}
+      pageKey={landingPage.slug}
+      projectFilterKey={landingPage.projectFilterKey}
+    />
+  )
 }

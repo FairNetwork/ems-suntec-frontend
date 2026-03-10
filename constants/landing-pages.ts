@@ -37,6 +37,7 @@ export type LandingPageContent = {
 export type LocalLandingPage = {
   slug: string
   city: string
+  projectFilterKey: string
   metadata: {
     title: string
     description: string
@@ -91,6 +92,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-steinfurt",
     city: "Steinfurt",
+    projectFilterKey: "steinfurt",
     metadata: {
       title: "PV-Anlage in Steinfurt | Photovoltaik von Ems Suntec",
       description:
@@ -142,6 +144,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-greven",
     city: "Greven",
+    projectFilterKey: "greven",
     metadata: {
       title: "PV-Anlage in Greven | Photovoltaik für Haus und Gewerbe",
       description:
@@ -193,6 +196,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-altenberge",
     city: "Altenberge",
+    projectFilterKey: "altenberge",
     metadata: {
       title: "PV-Anlage in Altenberge | Photovoltaik regional geplant",
       description:
@@ -244,6 +248,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-nordwalde",
     city: "Nordwalde",
+    projectFilterKey: "nordwalde",
     metadata: {
       title: "PV-Anlage in Nordwalde | Photovoltaik mit regionalem Service",
       description:
@@ -295,6 +300,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-saerbeck",
     city: "Saerbeck",
+    projectFilterKey: "saerbeck",
     metadata: {
       title: "PV-Anlage in Saerbeck | Photovoltaik nachhaltig umgesetzt",
       description:
@@ -346,6 +352,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-rheine",
     city: "Rheine",
+    projectFilterKey: "rheine",
     metadata: {
       title: "PV-Anlage in Rheine | Photovoltaik für private und gewerbliche Dächer",
       description:
@@ -397,6 +404,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-emsdetten",
     city: "Emsdetten",
+    projectFilterKey: "emsdetten",
     metadata: {
       title: "PV-Anlage in Emsdetten | Photovoltaik direkt vom regionalen Fachbetrieb",
       description:
@@ -448,6 +456,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-muenster",
     city: "Münster",
+    projectFilterKey: "muenster",
     metadata: {
       title: "PV-Anlage in Münster | Photovoltaik für urbane Dachflächen",
       description:
@@ -499,6 +508,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-wettringen",
     city: "Wettringen",
+    projectFilterKey: "wettringen",
     metadata: {
       title: "PV-Anlage in Wettringen | Photovoltaik für Eigenheime und Betriebe",
       description:
@@ -550,6 +560,7 @@ export const localLandingPages = [
   {
     slug: "pv-anlage-ochtrup",
     city: "Ochtrup",
+    projectFilterKey: "ochtrup",
     metadata: {
       title: "PV-Anlage in Ochtrup | Photovoltaik effizient geplant",
       description:
