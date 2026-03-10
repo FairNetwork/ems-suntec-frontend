@@ -1,36 +1,29 @@
-"use client"
+import ProjectsPage from "@/components/pages/ProjectsPage"
+import { buildPageMetadata } from "@/constants/seo"
 
-import { motion } from "framer-motion"
-import { useState } from "react"
-import PageHeader from "@/components/ui/PageHeader"
-import ProjectGallery from "@/components/sections/ProjectGallery"
-import ProjectFilter from "@/components/ui/ProjectFilter"
-import ContactTeaser from "@/components/sections/ContactTeaser"
-import { useProjects } from "@/hooks/useProjects"
+export const metadata = buildPageMetadata({
+  title: "Referenzen | Photovoltaik Projekte von Ems Suntec",
+  description:
+    "Entdecken Sie realisierte Photovoltaik-Projekte von Ems Suntec. Referenzen fuer PV-Anlagen im Kreis Steinfurt, in Emsdetten, Rheine, Greven, Muenster und Umgebung.",
+  path: "/projects",
+  keywords: [
+    "Photovoltaik Referenzen",
+    "PV Projekte Kreis Steinfurt",
+    "Solaranlage Beispiele",
+    "Photovoltaik Referenzen Muensterland",
+    "PV Anlage Referenzen Emsdetten",
+    "Solarprojekte Rheine Greven Muenster",
+  ],
+})
 
-export default function ProjectsPage() {
-  const [activeFilter, setActiveFilter] = useState("all")
-  const { projects, loading } = useProjects()
+type ProjectsRouteProps = {
+  searchParams: Promise<{
+    location?: string
+  }>
+}
 
-  const filteredProjects =
-    activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter)
+export default async function ProjectsRoute({ searchParams }: ProjectsRouteProps) {
+  const { location } = await searchParams
 
-  return (
-    <motion.main
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="min-h-screen pt-20"
-      key='projects'
-    >
-      <PageHeader title="Unsere Referenzen" subtitle="Unsere erfolgreich realisierten Projekte" />
-
-      <div className="container mx-auto px-4 py-12">
-        {/*<ProjectFilter activeFilter={activeFilter} onFilterChange={setActiveFilter} />*/}
-        <ProjectGallery projects={filteredProjects} loading={loading} />
-      </div>
-
-      <ContactTeaser />
-    </motion.main>
-  )
+  return <ProjectsPage initialLocationFilter={location} />
 }

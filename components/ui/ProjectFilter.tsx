@@ -1,23 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { PROJECT_LOCATION_FILTERS } from "@/constants/projects"
 
 interface ProjectFilterProps {
   activeFilter: string
   onFilterChange: (filter: string) => void
 }
 
-const filters = [
-  { key: "all", label: "Alle Projekte" },
-  { key: "residential", label: "Privat" },
-  { key: "commercial", label: "Gewerbe" },
-  { key: "industrial", label: "Industrie" },
-]
-
 export default function ProjectFilter({ activeFilter, onFilterChange }: ProjectFilterProps) {
   return (
     <div className="flex flex-wrap gap-4 justify-center mb-12">
-      {filters.map((filter) => (
+      {PROJECT_LOCATION_FILTERS.map((filter) => (
         <motion.button
           key={filter.key}
           onClick={() => onFilterChange(filter.key)}

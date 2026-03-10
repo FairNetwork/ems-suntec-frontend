@@ -11,6 +11,44 @@ export interface Project {
     storage: string,
 }
 
+export type ProjectLocationFilter = {
+    key: string
+    label: string
+    locations: string[]
+}
+
+export const PROJECT_LOCATION_FILTERS: ProjectLocationFilter[] = [
+    { key: "all", label: "Alle Orte", locations: [] },
+    { key: "steinfurt", label: "Steinfurt", locations: ["Steinfurt", "Borghorst"] },
+    { key: "greven", label: "Greven", locations: ["Greven"] },
+    { key: "altenberge", label: "Altenberge", locations: ["Altenberge"] },
+    { key: "nordwalde", label: "Nordwalde", locations: ["Nordwalde"] },
+    { key: "saerbeck", label: "Saerbeck", locations: ["Saerbeck"] },
+    { key: "rheine", label: "Rheine", locations: ["Rheine"] },
+    { key: "emsdetten", label: "Emsdetten", locations: ["Emsdetten"] },
+    { key: "muenster", label: "Münster", locations: ["Münster"] },
+    { key: "wettringen", label: "Wettringen", locations: ["Wettringen"] },
+    { key: "ochtrup", label: "Ochtrup", locations: ["Ochtrup"] },
+]
+
+export function getProjectLocationFilter(key: string) {
+    return PROJECT_LOCATION_FILTERS.find((filter) => filter.key === key)
+}
+
+export function filterProjectsByLocation(projects: Project[], key?: string) {
+    if (!key || key === "all") {
+        return projects
+    }
+
+    const filter = getProjectLocationFilter(key)
+
+    if (!filter) {
+        return projects
+    }
+
+    return projects.filter((project) => filter.locations.includes(project.location))
+}
+
 export const PROJECTS: Project[] = [
     {
         id: '01965cb7-b2c1-7cf5-a508-389a8cac99c8',
