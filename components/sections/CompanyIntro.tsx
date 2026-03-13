@@ -26,9 +26,14 @@ export default function CompanyIntro({content, isPrimarySection = false}: Compan
                     >
                         {
                             isPrimarySection ? (
-                                <p className="text-lg text-gray-600 mb-8">
-                                    {content.description}
-                                </p>
+                                <>
+                                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                                        {content.introTitle ?? content.heading}
+                                    </h1>
+                                    <p className="text-lg text-gray-600 mb-8 whitespace-pre-line">
+                                        {content.description}
+                                    </p>
+                                </>
                                 ):(
                                 <>
                                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{content.heading}</h2>
