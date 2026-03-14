@@ -21,17 +21,17 @@ export default function Footer() {
                             Photovoltaik im Kreis Steinfurt
                         </p>
                         <ul className="text-gray-400 text-sm list-disc list-inside">
-                            <li>Altenberge</li>
-                            <li>Emsdetten</li>
-                            <li>Greven</li>
-                            <li>Münster</li>
-                            <li>Neuenkirchen</li>
-                            <li>Nordwalde</li>
-                            <li>Ochtrup</li>
-                            <li>Rheine</li>
-                            <li>Saerbeck</li>
-                            <li>Steinfurt</li>
-                            <li>Wettringen</li>
+                            <li><a href='/pv-anlage-altenberge'>Altenberge</a></li>
+                            <li><a href='/pv-anlage-emsdetten'>Emsdetten</a></li>
+                            <li><a href='/pv-anlage-greven'>Greven</a></li>
+                            <li><a href='/pv-anlage-muenster'>Münster</a></li>
+                            <li><a href='/pv-anlage-neuenkirchen'>Neuenkirchen</a></li>
+                            <li><a href='/pv-anlage-nordwalde'>Nordwalde</a></li>
+                            <li><a href='/pv-anlage-ochtrup'>Ochtrup</a></li>
+                            <li><a href='/pv-anlage-rheine'>Rheine</a></li>
+                            <li><a href='/pv-anlage-saerbeck'>Saerbeck</a></li>
+                            <li><a href='/pv-anlage-steinfurt'>Steinfurt</a></li>
+                            <li><a href='/pv-anlage-wettringen'>Wettringen</a></li>
                         </ul>
                     </div>
 
