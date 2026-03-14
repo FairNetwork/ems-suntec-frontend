@@ -10,10 +10,15 @@ export type CompanyFeature = {
 }
 
 export type CompanyIntroContent = {
+  introTitle?: string
+  introDescription?: string
   heading: string
   description: string
   features: CompanyFeature[]
+  imageSrc?: string
   imageAlt: string
+  badgeImageSrc?: string
+  badgeImageAlt?: string
   experienceLabel: string
 }
 
@@ -88,7 +93,7 @@ export const defaultLandingPageContent: LandingPageContent = {
   },
 }
 
-export const localLandingPages = [
+const baseLocalLandingPages: LocalLandingPage[] = [
   {
     slug: "pv-anlage-steinfurt",
     city: "Steinfurt",
@@ -130,7 +135,7 @@ export const localLandingPages = [
         experienceLabel: "Regional",
       },
       projectTeaser: {
-        heading: "Photovoltaik-Projekte aus dem Kreis Steinfurt",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Unsere Referenzen zeigen, wie unterschiedlich PV-Anlagen in der Region umgesetzt werden können und welche Lösungen sich für verschiedene Dachtypen eignen.",
       },
@@ -182,14 +187,14 @@ export const localLandingPages = [
         experienceLabel: "Effizient",
       },
       projectTeaser: {
-        heading: "Referenzen, die Orientierung geben",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Wer eine PV-Anlage in Greven plant, will reale Beispiele sehen. Unsere Projekte geben einen guten Eindruck von Leistungsklassen und Umsetzungsmöglichkeiten.",
       },
       contactTeaser: {
         heading: "Photovoltaik in Greven unverbindlich anfragen",
         description:
-          "Sprechen Sie mit uns über Ihre Dachfläche, Ihren Stromverbrauch und die passende PV-Anlage für Greven. Die Erstberatung ist kostenlos.",
+          "Sprechen Sie mit uns über Ihre Dachfläche, Ihren Stromverbrauch und die passende PV-Anlage für Greven. Die Erstberatung ist natürlich kostenlos.",
       },
     },
   },
@@ -234,7 +239,7 @@ export const localLandingPages = [
         experienceLabel: "Individuell",
       },
       projectTeaser: {
-        heading: "Einblicke in umgesetzte Solarprojekte",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Unsere Referenzen zeigen, wie sich auch bei unterschiedlichen Dachformen wirtschaftliche Photovoltaik-Lösungen realisieren lassen.",
       },
@@ -286,7 +291,7 @@ export const localLandingPages = [
         experienceLabel: "Verlässlich",
       },
       projectTeaser: {
-        heading: "Beispiele für Photovoltaik aus der Umgebung",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Reale Projekte helfen bei der Orientierung. Unsere Referenzen zeigen, wie unterschiedlich Dachflächen und Anforderungen gelöst werden können.",
       },
@@ -338,7 +343,7 @@ export const localLandingPages = [
         experienceLabel: "Nachhaltig",
       },
       projectTeaser: {
-        heading: "Solarprojekte mit Praxisbezug",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Unsere Referenzen veranschaulichen, wie moderne Photovoltaik-Anlagen im regionalen Umfeld geplant und umgesetzt werden.",
       },
@@ -390,7 +395,7 @@ export const localLandingPages = [
         experienceLabel: "Praxisnah",
       },
       projectTeaser: {
-        heading: "Referenzen für Wohnhaus und Gewerbe",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Sehen Sie sich an, wie Ems Suntec unterschiedliche Photovoltaik-Projekte in der Region löst und welche Anlagengrößen bereits realisiert wurden.",
       },
@@ -442,7 +447,7 @@ export const localLandingPages = [
         experienceLabel: "Nah dran",
       },
       projectTeaser: {
-        heading: "Projekte aus unserem direkten Umfeld",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Unsere Referenzen zeigen Photovoltaik-Lösungen aus der Region und geben eine gute Orientierung für Ihre geplante Anlage in Emsdetten.",
       },
@@ -494,7 +499,7 @@ export const localLandingPages = [
         experienceLabel: "Durchdacht",
       },
       projectTeaser: {
-        heading: "Referenzen für moderne Solarlösungen",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Unsere Projekte zeigen, wie Photovoltaik auf unterschiedlichen Dachflächen wirtschaftlich und technisch sauber umgesetzt werden kann.",
       },
@@ -546,7 +551,7 @@ export const localLandingPages = [
         experienceLabel: "Klar",
       },
       projectTeaser: {
-        heading: "Praxisnahe Beispiele aus der Region",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Ein Blick in unsere Referenzen hilft bei der Einschätzung, welche Photovoltaik-Lösung für Ihre Immobilie in Frage kommt.",
       },
@@ -598,7 +603,7 @@ export const localLandingPages = [
         experienceLabel: "Effektiv",
       },
       projectTeaser: {
-        heading: "Referenzen für unterschiedliche Dachtypen",
+        heading: "Referenzen in Ihrer Region:",
         description:
           "Unsere Projekte zeigen, wie sich Photovoltaik-Anlagen in der Region auf verschiedenen Gebäuden wirtschaftlich umsetzen lassen.",
       },
@@ -609,7 +614,154 @@ export const localLandingPages = [
       },
     },
   },
+  {
+    slug: "pv-anlage-neuenkirchen",
+    city: "Neuenkirchen",
+    projectFilterKey: "neuenkirchen",
+    metadata: {
+      title: "PV-Anlage in Neuenkirchen | Photovoltaik regional umgesetzt",
+      description:
+        "Photovoltaik in Neuenkirchen: Ems Suntec plant und installiert PV-Anlagen mit persönlicher Beratung und regionaler Betreuung.",
+    },
+    content: {
+      hero: {
+        title: "PV-Anlage in Neuenkirchen",
+        highlightedWord: "Neuenkirchen",
+        description:
+          "Wer in Neuenkirchen eine PV-Anlage plant, sucht meist eine langlebige und wirtschaftliche Lösung. Ems Suntec entwickelt Photovoltaik-Konzepte, die zu Dachfläche, Verbrauch und Erweiterungswünschen passen.",
+      },
+      companyIntro: {
+        heading: "Photovoltaik in Neuenkirchen mit regionaler Nähe",
+        description:
+          "In Neuenkirchen begleiten wir Solarprojekte für private und gewerbliche Gebäude mit einem klaren Fokus auf persönliche Beratung, saubere Planung und fachgerechte Umsetzung.",
+        features: [
+          {
+            title: "Beratung mit Blick aufs Ganze",
+            description:
+              "Wir betrachten in Neuenkirchen nicht nur das Dach, sondern auch Eigenverbrauch, Speicheroptionen und die langfristige Nutzung Ihrer Photovoltaikanlage.",
+          },
+          {
+            title: "Passende Auslegung",
+            description:
+              "Ihre PV-Anlage in Neuenkirchen wird so dimensioniert, dass Leistung, Wirtschaftlichkeit und Alltagstauglichkeit zusammenpassen.",
+          },
+          {
+            title: "Direkte Betreuung aus der Region",
+            description:
+              "Kurze Wege und feste Ansprechpartner sorgen dafür, dass Ihr Photovoltaik-Projekt in Neuenkirchen zügig und zuverlässig umgesetzt wird.",
+          },
+        ],
+        imageAlt: "Photovoltaik in Neuenkirchen",
+        experienceLabel: "Regional",
+      },
+      projectTeaser: {
+        heading: "Referenzen in Ihrer Region:",
+        description:
+          "Unsere realisierten Projekte zeigen, wie Photovoltaik-Lösungen in der Region geplant werden und welche Anlagengrößen sich in der Praxis bewähren.",
+      },
+      contactTeaser: {
+        heading: "PV-Anlage in Neuenkirchen anfragen",
+        description:
+          "Lassen Sie Ihre geplante Photovoltaikanlage in Neuenkirchen unverbindlich mit uns besprechen. Wir beraten Sie kostenlos und praxisnah.",
+      },
+    },
+  },
 ]
+
+const localLandingPageAssets: Record<string, { imageSrc: string; badgeImageSrc: string }> = {
+  steinfurt: {
+    imageSrc: "/landing-pages/steinfurt.jpg",
+    badgeImageSrc: "/landing-pages/wappen-steinfurt.png",
+  },
+  greven: {
+    imageSrc: "/landing-pages/greven.JPG",
+    badgeImageSrc: "/landing-pages/wappen-greven.png",
+  },
+  altenberge: {
+    imageSrc: "/landing-pages/altenberge.webp",
+    badgeImageSrc: "/landing-pages/wappen-altenberge.png",
+  },
+  nordwalde: {
+    imageSrc: "/landing-pages/nordwalde.avif",
+    badgeImageSrc: "/landing-pages/wappen-nordwalde.png",
+  },
+  saerbeck: {
+    imageSrc: "/landing-pages/saerbeck.jpg",
+    badgeImageSrc: "/landing-pages/wappen-saerbeck.png",
+  },
+  rheine: {
+    imageSrc: "/landing-pages/rheine.jpg",
+    badgeImageSrc: "/landing-pages/wappen-rheine.png",
+  },
+  emsdetten: {
+    imageSrc: "/landing-pages/emsdetten.webp",
+    badgeImageSrc: "/landing-pages/wappen-emsdetten.png",
+  },
+  muenster: {
+    imageSrc: "/landing-pages/muenster.webp",
+    badgeImageSrc: "/landing-pages/wappen-muenster.png",
+  },
+  wettringen: {
+    imageSrc: "/landing-pages/wettringen.jpg",
+    badgeImageSrc: "/landing-pages/wappen-wettringen.png",
+  },
+  ochtrup: {
+    imageSrc: "/landing-pages/ochtrup.jpg",
+    badgeImageSrc: "/landing-pages/wappen-ochtrup.png",
+  },
+  neuenkirchen: {
+    imageSrc: "/landing-pages/neuenkirchen.jpg",
+    badgeImageSrc: "/landing-pages/wappen-neuenkirchen.png",
+  },
+}
+
+const localCompanyIntroTexts: Record<string, string> = {
+  altenberge:
+    "Die Hohe Ulme ist nicht nur ein Wahrzeichen, sondern ein Symbol für die Beständigkeit Altenberges. Von hier oben blickt man auf eine Gemeinde, die Tradition mit Fortschritt vereint. Wer hier lebt, schätzt die Weitsicht – und die sollte sich auch auf dem eigenen Dach widerspiegeln.\n\nNachhaltigkeits-Check: 2025 lieferte die Sonne in Altenberge satte 1.110 kWh pro m². Mit einer 10 kWp Anlage auf Ihrem Dach hätten Sie im letzten Jahr rund 10.300 kWh sauberen Strom produziert. Das deckt nicht nur den Bedarf einer vierköpfigen Familie, sondern spart bei den aktuellen Strompreisen bares Geld, während Sie unter der Hohen Ulme die frische Luft genießen.",
+  emsdetten:
+    "Der Morgentaubrunnen im Herzen Emsdettens steht für Vitalität und den Fluss der Zeit. In einer Stadt, die so dynamisch gewachsen ist, gehört eine moderne Energieversorgung einfach dazu. Nachhaltigkeit bedeutet hier, die Energie des Tages direkt zu nutzen.\n\nNachhaltigkeits-Check: Mit einer Sonneneinstrahlung von ca. 1.100 kWh/m² im Jahr 2025 ist Ihr Hausdach in Emsdetten ein kleines Kraftwerk. Ein potenzieller Ertrag von über 10.000 kWh pro Jahr (bei 10 kWp) sorgt dafür, dass Ihre Energiekosten so entspannt bleiben wie ein Nachmittag am Brunnen.",
+  greven:
+    "Die Alte Spinnerei erinnert an die industrielle Blüte Grevens. Heute ist sie ein Ort für Kultur und Begegnung. Dieser Geist des „Machens“ lässt sich perfekt auf die Energiewende übertragen: Produzieren Sie Ihren eigenen Strom dort, wo er verbraucht wird.\n\nNachhaltigkeits-Check: Greven profitierte 2025 von einem extrem sonnigen Frühling. Bei einer Einstrahlung von rund 1.115 kWh/m² erzielen moderne Module Höchstwerte. Ihr Ertragspotenzial liegt bei ca. 1.040 kWh pro installiertem kWp – eine Rendite, die jede klassische Anlage in den Schatten stellt.",
+  muenster:
+    "Münsters Prinzipalmarkt ist das „Wohnzimmer“ der Stadt und Inbegriff von Beständigkeit. Doch auch hinter historischen Fassaden zieht die Moderne ein. In Münster ist Klimaschutz Ehrensache, um die Lebensqualität zwischen Aasee und Lamberti zu sichern.\n\nNachhaltigkeits-Check: Münster war 2025 eine der Sonnen-Spitzenreiter in NRW mit ca. 1.120 kWh/m². Eine Solaranlage auf Ihrem Dach produziert jährlich genug Strom, um ein E-Auto über 50.000 km weit fahren zu lassen. Der Prinzipalmarkt bleibt geschützt, während Sie Ihre private Energiewende feiern.",
+  neuenkirchen:
+    "Der Offlumer See ist das blaue Herz Neuenkirchens. Hier wird deutlich, wie schützenswert unsere Natur ist. Wer hier wohnt, liebt die Sonne am Wasser – und sollte sie auch auf dem Hausdach willkommen heißen.\n\nNachhaltigkeits-Check: Die offene Lage rund um den See begünstigt die Solarausbeute. 2025 wurden hier Spitzenwerte von ca. 1.105 kWh/m² erreicht. Mit einem Ertrag von rund 10.200 kWh (bei 10 kWp) machen Sie sich unabhängig von Strompreisen und schützen gleichzeitig das Klima Ihres Naherholungsgebiets.",
+  nordwalde:
+    "Die markante St. Dionysius-Kirche prägt die Silhouette von Nordwalde seit Jahrhunderten. Sie steht für Gemeinschaft und Beständigkeit. Nachhaltigkeit in Nordwalde bedeutet, diese Werte in die Zukunft zu tragen – durch verantwortungsvolles Handeln.\n\nNachhaltigkeits-Check: Der Blick vom Kirchturm zeigt: Viele Dächer liegen perfekt zur Sonne. Mit einer Einstrahlung von 1.110 kWh/m² in 2025 ist Photovoltaik hier eine sichere Bank. Jedes kWp auf Ihrem Dach erwirtschaftet ca. 1.030 kWh – eine Investition, die so solide ist wie das Kirchenschiff.",
+  ochtrup:
+    "Haus Wellbergen ist eine Oase der Ruhe und Ästhetik. Ochtrup zeigt hier seine idyllische Seite. Diese Schönheit zu bewahren, erfordert moderne Lösungen wie die Solarenergie, die lautlos und sauber für uns arbeitet.\n\nNachhaltigkeits-Check: Im sonnigen Jahr 2025 lieferte der Himmel über Ochtrup rund 1.100 kWh/m². Für Hausbesitzer bedeutet das bei einer Standardanlage einen Ertrag von ca. 10.150 kWh. Sie bewahren die Idylle von Wellbergen und füllen gleichzeitig Ihre Haushaltskasse.",
+  rheine:
+    "In Rheine ist der Naturzoo der Ort, an dem wir ökologische Zusammenhänge verstehen. Es ist der perfekte Impuls, auch das eigene Zuhause biologisch und energetisch sinnvoll aufzustellen.\n\nNachhaltigkeits-Check: Mit über 1.800 Sonnenstunden in 2025 bietet Rheine ideale Bedingungen. Die Einstrahlung von 1.112 kWh/m² ermöglicht einen Ertrag von ca. 1.040 kWh pro kWp. So unterstützen Sie den Klimaschutz global und sparen lokal in der Emsstadt.",
+  saerbeck:
+    "Als Klimakommune ist Saerbeck weltweit bekannt. Die Sinninger Mühle ist das historische Pendant zu den modernen Windrädern und Solarparks. Hier gehört die Nutzung von Naturkräften zur DNA.\n\nNachhaltigkeits-Check: In Saerbeck ist man Profi: 2025 brachte die Sonne ca. 1.115 kWh/m². Eine 10 kWp Anlage liefert hier locker 10.500 kWh pro Jahr. Sie leben nicht nur in einer Vorzeigestadt, sondern profitieren persönlich von der höchsten Effizienz der Region.",
+  steinfurt:
+    "Das Schloss Burgsteinfurt ist ein Juwel westfälischer Baukunst. Es erinnert uns daran, Werte für Generationen zu schaffen. Eine Photovoltaikanlage ist das moderne Äquivalent zu einem festen Schlosswall: Schutz vor äußeren Einflüssen wie Strompreissteigerungen.\n\nNachhaltigkeits-Check: 2025 strahlte die Sonne mit ca. 1.110 kWh/m² auf die Kreisstadt. Ihr Dach kann einen jährlichen Ertrag von ca. 10.300 kWh generieren. Das ist nachhaltige Wertsteigerung für Ihr Eigentum im Schatten des Schlosses.",
+  wettringen:
+    "Die Haddorfer Seen sind das Paradies für Camper und Naturliebhaber. In Wettringen wird Erholung großgeschrieben. Mit einer Solaranlage holen Sie sich diese Entspannung auch in Ihre Finanzen.\n\nNachhaltigkeits-Check: Die flache Parklandschaft ermöglicht eine ungehindert hohe Einstrahlung von 1.108 kWh/m² im Jahr 2025. Das Potenzial von rund 10.200 kWh pro Jahr lässt Sie so gelassen in die Zukunft blicken wie einen Angler am Haddorfer See.",
+}
+
+export const localLandingPages = baseLocalLandingPages.map((page) => {
+  const assets = localLandingPageAssets[page.projectFilterKey]
+  const localText = localCompanyIntroTexts[page.projectFilterKey]
+
+  return {
+    ...page,
+    content: {
+      ...page.content,
+      companyIntro: {
+        ...page.content.companyIntro,
+        introTitle: page.content.hero.title,
+        introDescription: localText,
+        heading: page.content.hero.title,
+        description: localText ?? page.content.companyIntro.description,
+        features: localText ? [] : page.content.companyIntro.features,
+        imageSrc: assets?.imageSrc,
+        badgeImageSrc: assets?.badgeImageSrc,
+        badgeImageAlt: `Wappen von ${page.city}`,
+      },
+    },
+  }
+})
 
 export const localLandingPagesBySlug = Object.fromEntries(
   localLandingPages.map((page) => [page.slug, page]),

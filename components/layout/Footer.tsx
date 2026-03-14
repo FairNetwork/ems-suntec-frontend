@@ -21,16 +21,17 @@ export default function Footer() {
                             Photovoltaik im Kreis Steinfurt
                         </p>
                         <ul className="text-gray-400 text-sm list-disc list-inside">
-                            <li>Steinfurt</li>
-                            <li>Greven</li>
                             <li>Altenberge</li>
-                            <li>Nordwalde</li>
-                            <li>Saerbeck</li>
-                            <li>Rheine</li>
                             <li>Emsdetten</li>
+                            <li>Greven</li>
                             <li>Münster</li>
-                            <li>Wettringen</li>
+                            <li>Neuenkirchen</li>
+                            <li>Nordwalde</li>
                             <li>Ochtrup</li>
+                            <li>Rheine</li>
+                            <li>Saerbeck</li>
+                            <li>Steinfurt</li>
+                            <li>Wettringen</li>
                         </ul>
                     </div>
 

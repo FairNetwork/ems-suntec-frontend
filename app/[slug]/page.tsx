@@ -42,6 +42,7 @@ export default async function LocalLandingPage({ params }: LocalLandingPageProps
       content={landingPage.content}
       pageKey={landingPage.slug}
       projectFilterKey={landingPage.projectFilterKey}
+      showHero={false}
     />
   )
 }

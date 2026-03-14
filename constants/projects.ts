@@ -29,6 +29,7 @@ export const PROJECT_LOCATION_FILTERS: ProjectLocationFilter[] = [
     { key: "muenster", label: "Münster", locations: ["Münster"] },
     { key: "wettringen", label: "Wettringen", locations: ["Wettringen"] },
     { key: "ochtrup", label: "Ochtrup", locations: ["Ochtrup"] },
+    { key: "neuenkirchen", label: "Neuenkirchen", locations: ["Neuenkirchen", "Neunkirchen"] },
 ]
 
 export function getProjectLocationFilter(key: string) {
