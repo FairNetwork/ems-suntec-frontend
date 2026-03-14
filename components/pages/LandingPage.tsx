@@ -12,9 +12,10 @@ type LandingPageProps = {
   content: LandingPageContent
   pageKey: string
   projectFilterKey?: string
+  showHero?: boolean
 }
 
-export default function LandingPage({ content, pageKey, projectFilterKey }: LandingPageProps) {
+export default function LandingPage({ content, pageKey, projectFilterKey, showHero = true }: LandingPageProps) {
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -23,9 +24,19 @@ export default function LandingPage({ content, pageKey, projectFilterKey }: Land
       className="min-h-screen"
       key={pageKey}
     >
-      <HeroSection content={content.hero} />
-      <TrustIndicators />
-      <CompanyIntro content={content.companyIntro} />
+      {showHero ? (
+        <>
+          <HeroSection content={content.hero} />
+          <TrustIndicators />
+          <CompanyIntro content={content.companyIntro} />
+        </>
+      ) : (
+        <>
+          <div style={{height: '5em'}}/>
+          <TrustIndicators />
+          <CompanyIntro content={content.companyIntro} isPrimarySection />
+        </>
+      )}
       <ProjectTeaser content={content.projectTeaser} projectFilterKey={projectFilterKey} />
       <ContactTeaser content={content.contactTeaser} />
     </motion.main>
