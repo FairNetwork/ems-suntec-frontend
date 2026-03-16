@@ -21,17 +21,17 @@ export default function Footer() {
                             Photovoltaik im Kreis Steinfurt
                         </p>
                         <ul className="text-gray-400 text-sm list-disc list-inside">
-                            <li><a href='/pv-anlage-altenberge'>Altenberge</a></li>
-                            <li><a href='/pv-anlage-emsdetten'>Emsdetten</a></li>
-                            <li><a href='/pv-anlage-greven'>Greven</a></li>
-                            <li><a href='/pv-anlage-muenster'>Münster</a></li>
-                            <li><a href='/pv-anlage-neuenkirchen'>Neuenkirchen</a></li>
-                            <li><a href='/pv-anlage-nordwalde'>Nordwalde</a></li>
-                            <li><a href='/pv-anlage-ochtrup'>Ochtrup</a></li>
-                            <li><a href='/pv-anlage-rheine'>Rheine</a></li>
-                            <li><a href='/pv-anlage-saerbeck'>Saerbeck</a></li>
-                            <li><a href='/pv-anlage-steinfurt'>Steinfurt</a></li>
-                            <li><a href='/pv-anlage-wettringen'>Wettringen</a></li>
+                            <li><a href='/pv-anlage-altenberge' className="text-gray-400 hover:text-white transition-colors">Altenberge</a></li>
+                            <li><a href='/pv-anlage-emsdetten' className="text-gray-400 hover:text-white transition-colors">Emsdetten</a></li>
+                            <li><a href='/pv-anlage-greven' className="text-gray-400 hover:text-white transition-colors">Greven</a></li>
+                            <li><a href='/pv-anlage-muenster' className="text-gray-400 hover:text-white transition-colors">Münster</a></li>
+                            <li><a href='/pv-anlage-neuenkirchen' className="text-gray-400 hover:text-white transition-colors">Neuenkirchen</a></li>
+                            <li><a href='/pv-anlage-nordwalde' className="text-gray-400 hover:text-white transition-colors">Nordwalde</a></li>
+                            <li><a href='/pv-anlage-ochtrup' className="text-gray-400 hover:text-white transition-colors">Ochtrup</a></li>
+                            <li><a href='/pv-anlage-rheine' className="text-gray-400 hover:text-white transition-colors">Rheine</a></li>
+                            <li><a href='/pv-anlage-saerbeck' className="text-gray-400 hover:text-white transition-colors">Saerbeck</a></li>
+                            <li><a href='/pv-anlage-steinfurt' className="text-gray-400 hover:text-white transition-colors">Steinfurt</a></li>
+                            <li><a href='/pv-anlage-wettringen' className="text-gray-400 hover:text-white transition-colors">Wettringen</a></li>
                         </ul>
                     </div>
 
@@ -109,13 +109,17 @@ export default function Footer() {
                         <div className="flex-1"></div>
 
                         <div className="flex flex-col gap-4">
+                            <a href="https://www.e3dc.com/" target="_blank" rel="noopener noreferrer" className="w-[100px] self-end">
+                                <img src="/e3dc_Siegel_PARTNER_RGB.png" alt="E3DC zertifizierter Partner" className="w-[100px] self-end" />
+                            </a>
                             <div className="self-end text-[#66FF06]">
                                 powered by
                             </div>
-                            <a href="https://elektro-harbering.de/" target="_blank" rel="noopener noreferrer" className="self-end w-[160px]">
-                                <img src="/eh_logo.png" alt="Logo" className="self-end w-[160px]" />
-                            </a>
-
+                            <div className="flex flex-col items-end gap-4">
+                                <a href="https://elektro-harbering.de/" target="_blank" rel="noopener noreferrer" className="w-[160px]">
+                                    <img src="/eh_logo.png" alt="Elektro Harbering Logo" className="w-[160px]" />
+                                </a>
+                            </div>
                         </div>
                     </div>
 
