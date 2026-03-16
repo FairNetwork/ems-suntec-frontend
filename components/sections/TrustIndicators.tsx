@@ -31,8 +31,11 @@ const indicators = [
     },
 ]
 
+type TrustIndicatorsProps = {
+    inverted?: boolean
+}
 
-export default function TrustIndicators() {
+export default function TrustIndicators({inverted = false}: TrustIndicatorsProps) {
     const handleClick = (link?: string) => {
         if (link) {
             window.open(link, "_blank")
@@ -40,7 +43,7 @@ export default function TrustIndicators() {
     }
 
     return (
-        <section className="py-16 bg-white border-b border-gray-100">
+        <section className={`py-16 border-b ${inverted ? "bg-primary border-primary/80" : "bg-white border-gray-100"}`}>
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {indicators.map((indicator, index) => (
@@ -54,15 +57,15 @@ export default function TrustIndicators() {
                             onClick={() => handleClick(indicator.link)}
                         >
                             <div
-                                className="w-16 h-16 bg-accent rounded-full flex items-center relative justify-center mx-auto mb-4">
+                                className={`w-16 h-16 rounded-full flex items-center relative justify-center mx-auto mb-4 ${inverted ? "bg-white" : "bg-accent"}`}>
                                 <indicator.icon className="w-8 h-8 text-primary"/>
                                 {indicator.link && <img src="./google.webp" alt="google" className="absolute w-[20px] right-0 bottom-0"/>}
                             </div>
-                            <div className="text-2xl md:text-3xl font-bold text-gray-900 mb-1">{indicator.value}</div>
+                            <div className={`text-2xl md:text-3xl font-bold mb-1 ${inverted ? "text-white" : "text-gray-900"}`}>{indicator.value}</div>
                             <div
-                                className={`text-sm font-medium text-gray-900 mb-1`}
+                                className={`text-sm font-medium mb-1 ${inverted ? "text-white" : "text-gray-900"}`}
                                >{indicator.label}</div>
-                            <div className="text-xs text-gray-500 whitespace-pre-line">{indicator.description}</div>
+                            <div className={`text-xs whitespace-pre-line ${inverted ? "text-blue-50/90" : "text-gray-500"}`}>{indicator.description}</div>
                         </motion.div>
                     ))}
                 </div>
