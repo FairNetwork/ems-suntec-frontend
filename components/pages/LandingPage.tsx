@@ -16,6 +16,8 @@ type LandingPageProps = {
 }
 
 export default function LandingPage({ content, pageKey, projectFilterKey, showHero = true }: LandingPageProps) {
+  const isCityLandingPage = pageKey !== "home"
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -27,13 +29,13 @@ export default function LandingPage({ content, pageKey, projectFilterKey, showHe
       {showHero ? (
         <>
           <HeroSection content={content.hero} />
-          <TrustIndicators />
+          <TrustIndicators inverted={isCityLandingPage} />
           <CompanyIntro content={content.companyIntro} />
         </>
       ) : (
         <>
-          <div style={{height: '5em'}}/>
-          <TrustIndicators />
+          <div style={{height: '4em'}}/>
+          <TrustIndicators inverted={isCityLandingPage} />
           <CompanyIntro content={content.companyIntro} isPrimarySection />
         </>
       )}
