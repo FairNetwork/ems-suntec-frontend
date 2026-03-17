@@ -91,31 +91,34 @@ export default function Footer() {
                     <div className="flex flex-col h-full space-y-4">
                         <h3 className="text-lg font-semibold">Folgen Sie uns</h3>
 
-                        <div className="flex space-x-4">
-                            <a
-                                href="https://www.facebook.com/people/Ems-Suntec-GmbH/61580646570250/"
-                                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
-                            >
-                                <Facebook className="w-5 h-5"/>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/ems.suntec?igsh=MTMzMTBvZThpcGRqbA=="
-                                className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
-                            >
-                                <Instagram className="w-5 h-5"/>
+                        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                            <div className="flex space-x-4">
+                                <a
+                                    href="https://www.facebook.com/people/Ems-Suntec-GmbH/61580646570250/"
+                                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                                >
+                                    <Facebook className="w-5 h-5"/>
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/ems.suntec?igsh=MTMzMTBvZThpcGRqbA=="
+                                    className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors"
+                                >
+                                    <Instagram className="w-5 h-5"/>
+                                </a>
+                            </div>
+
+                            <a href="https://www.e3dc.com/" target="_blank" rel="noopener noreferrer" className="w-[100px] md:shrink-0">
+                                <img src="/e3dc_Siegel_PARTNER_RGB.png" alt="E3DC zertifizierter Partner" className="w-[100px]" />
                             </a>
                         </div>
 
                         <div className="flex-1"></div>
 
-                        <div className="flex flex-col gap-4">
-                            <a href="https://www.e3dc.com/" target="_blank" rel="noopener noreferrer" className="w-[100px] self-end">
-                                <img src="/e3dc_Siegel_PARTNER_RGB.png" alt="E3DC zertifizierter Partner" className="w-[100px] self-end" />
-                            </a>
-                            <div className="self-end text-[#66FF06]">
+                        <div className="flex flex-col gap-4 md:items-end">
+                            <div className="text-[#66FF06] md:text-right">
                                 powered by
                             </div>
-                            <div className="flex flex-col items-end gap-4">
+                            <div className="flex flex-col gap-4 md:items-end">
                                 <a href="https://elektro-harbering.de/" target="_blank" rel="noopener noreferrer" className="w-[160px]">
                                     <img src="/eh_logo.png" alt="Elektro Harbering Logo" className="w-[160px]" />
                                 </a>
