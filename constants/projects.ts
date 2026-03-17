@@ -50,6 +50,10 @@ export function filterProjectsByLocation(projects: Project[], key?: string) {
     return projects.filter((project) => filter.locations.includes(project.location))
 }
 
+export function sortProjectsByYearDesc(projects: Project[]) {
+    return [...projects].sort((a, b) => b.year - a.year)
+}
+
 export const PROJECTS: Project[] = [
     {
         id: '01965cb7-b2c1-7cf5-a508-389a8cac99c8',

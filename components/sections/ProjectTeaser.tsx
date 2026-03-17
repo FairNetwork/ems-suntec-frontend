@@ -6,7 +6,7 @@ import {ArrowRight} from "lucide-react"
 import {Button} from "@/components/ui/button"
 import {useProjects} from "@/hooks/useProjects"
 import type { ProjectTeaserContent } from "@/constants/landing-pages"
-import {filterProjectsByLocation} from "@/constants/projects"
+import {filterProjectsByLocation, sortProjectsByYearDesc} from "@/constants/projects"
 
 type ProjectTeaserProps = {
     content: ProjectTeaserContent
@@ -15,7 +15,7 @@ type ProjectTeaserProps = {
 
 export default function ProjectTeaser({content, projectFilterKey}: ProjectTeaserProps) {
     const {projects} = useProjects()
-    const filteredProjects = filterProjectsByLocation(projects, projectFilterKey)
+    const filteredProjects = sortProjectsByYearDesc(filterProjectsByLocation(projects, projectFilterKey))
     const featuredProjects = filteredProjects.slice(0, 3)
     const projectsHref = projectFilterKey ? `/projects?location=${projectFilterKey}` : "/projects"
 
