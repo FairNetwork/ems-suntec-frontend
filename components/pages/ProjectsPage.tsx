@@ -9,7 +9,7 @@ import ContactTeaser from "@/components/sections/ContactTeaser"
 import { useProjects } from "@/hooks/useProjects"
 import { defaultLandingPageContent } from "@/constants/landing-pages"
 import ProjectFilter from "@/components/ui/ProjectFilter"
-import { filterProjectsByLocation, getProjectLocationFilter } from "@/constants/projects"
+import { filterProjectsByLocation, getProjectLocationFilter, sortProjectsByYearDesc } from "@/constants/projects"
 
 type ProjectsPageProps = {
   initialLocationFilter?: string
@@ -29,7 +29,7 @@ export default function ProjectsPage({ initialLocationFilter = "all" }: Projects
     setActiveFilter(getProjectLocationFilter(requestedFilter) ? requestedFilter : "all")
   }, [searchParams])
 
-  const filteredProjects = filterProjectsByLocation(projects, activeFilter)
+  const filteredProjects = sortProjectsByYearDesc(filterProjectsByLocation(projects, activeFilter))
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter)
