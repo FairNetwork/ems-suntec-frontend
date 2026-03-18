@@ -16,14 +16,6 @@ export const metadata = buildPageMetadata({
   ],
 })
 
-type ProjectsRouteProps = {
-  searchParams: Promise<{
-    location?: string
-  }>
-}
-
-export default async function ProjectsRoute({ searchParams }: ProjectsRouteProps) {
-  const { location } = await searchParams
-
-  return <ProjectsPage initialLocationFilter={location} />
+export default function ProjectsRoute() {
+  return <ProjectsPage />
 }

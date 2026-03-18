@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
-import { usePathname, useRouter, useSearchParams } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 import PageHeader from "@/components/ui/PageHeader"
 import ProjectGallery from "@/components/sections/ProjectGallery"
 import ContactTeaser from "@/components/sections/ContactTeaser"
@@ -22,19 +22,18 @@ export default function ProjectsPage({ initialLocationFilter = "all" }: Projects
   const { projects, loading } = useProjects()
   const router = useRouter()
   const pathname = usePathname()
-  const searchParams = useSearchParams()
 
   useEffect(() => {
-    const requestedFilter = searchParams.get("location") ?? "all"
+    const requestedFilter = new URLSearchParams(window.location.search).get("location") ?? "all"
     setActiveFilter(getProjectLocationFilter(requestedFilter) ? requestedFilter : "all")
-  }, [searchParams])
+  }, [])
 
   const filteredProjects = sortProjectsByYearDesc(filterProjectsByLocation(projects, activeFilter))
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter)
 
-    const nextParams = new URLSearchParams(searchParams.toString())
+    const nextParams = new URLSearchParams(window.location.search)
 
     if (filter === "all") {
       nextParams.delete("location")
