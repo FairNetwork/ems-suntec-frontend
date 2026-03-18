@@ -43,7 +43,7 @@ export default function TrustIndicators({inverted = false}: TrustIndicatorsProps
     }
 
     return (
-        <section className={`py-16 border-b ${inverted ? "bg-primary border-primary/80" : "bg-white border-gray-100"}`}>
+        <section className={`py-16 border-b ${inverted ? "bg-secondary border-secondary/80" : "bg-white border-gray-100"}`}>
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                     {indicators.map((indicator, index) => (

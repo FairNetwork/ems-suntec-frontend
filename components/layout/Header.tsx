@@ -33,9 +33,9 @@ export default function Header() {
             <div className="container mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center space-x-2">
-                        <div className="w-12 h-12  flex items-center justify-center">
-                            <img className="w-12 h-12 text-white" src="/emsstec_logo.svg" alt="logo"/>
+                    <Link href="/" className="flex items-center space-x-6">
+                        <div className="w-[50px] h-[50px]  flex items-center justify-center">
+                            <img className="w-[50px] h-[50px] text-white" src="/emsstec_logo.svg" alt="logo"/>
                         </div>
                         <span className="text-xl font-bold text-gray-900">Ems Suntec</span>
                     </Link>
